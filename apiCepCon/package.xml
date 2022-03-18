@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <zosConnectApi xmlns="http://www.ibm.com/zosConnect/2.0/zosConnectApi" id="apicepcon">
-    <apiSpec title="apicepcon" basePath="/apicepcon" description="" version="1.0.0">
+    <apiSpec title="apicepcon" basePath="/apicepcon" description="Apresentacao Serasa" version="1.0.0">
         <path relativePath="/cepCon/{cepCodx}">
             <method type="GET" zosConnectServiceRef="cepSerCon" httpXformFile="api/cepCon/{cepCodx}/GET/mapping.xml" operationId="getCepSerCon"></method>
         </path>

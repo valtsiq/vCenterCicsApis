@@ -1,7 +1,7 @@
 {
   "swagger" : "2.0",
   "info" : {
-    "description" : "",
+    "description" : "Apresentacao Serasa",
     "version" : "1.0.0",
     "title" : "apicepcon"
   },
