@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <service xmlns:ns2="http://www.ibm.com/ims/Transaction">
     <shallow>true</shallow>
-    <serviceName>cicsCepSerIns</serviceName>
+    <serviceName>cicsCepSerCon</serviceName>
     <serviceType>ims-rest</serviceType>
     <resourceType>TRAN</resourceType>
     <status>1</status>
     <conversionType>3</conversionType>
     <dataProtocol>0</dataProtocol>
     <serviceInputInterface>
-        <metadataName>cicsCepSerInsQ.si</metadataName>
+        <metadataName>cicsCepSerQ.si</metadataName>
         <serviceInterface>
             <interface>
                 <segment segmentName="COMMAREA">
                     <interfaceField included="Y" fieldName="cep">
                         <field included="Y" fieldName="cepCode" isHex="false"/>
-                        <field included="Y" fieldName="uf" isHex="false"/>
-                        <field included="Y" fieldName="cidade" isHex="false"/>
-                        <field included="Y" fieldName="bairro" isHex="false"/>
-                        <field included="Y" fieldName="logradouro" isHex="false"/>
+                        <field included="N" fieldName="uf" isHex="false"/>
+                        <field included="N" fieldName="cidade" isHex="false"/>
+                        <field included="N" fieldName="bairro" isHex="false"/>
+                        <field included="N" fieldName="logradouro" isHex="false"/>
                     </interfaceField>
                 </segment>
             </interface>
@@ -25,7 +25,7 @@
         <version>0</version>
     </serviceInputInterface>
     <serviceOutputInterface>
-        <metadataName>cicsCepSerInsQ.si</metadataName>
+        <metadataName>cicsCepSerP.si</metadataName>
         <serviceInterface>
             <interface>
                 <segment segmentName="COMMAREA">
@@ -46,7 +46,7 @@
     <ccsid>IBM037</ccsid>
     <totalExecCount>0</totalExecCount>
     <failedCount>0</failedCount>
-    <trancodeOverride>CEPCICS3</trancodeOverride>
+    <trancodeOverride>CEPCICS1</trancodeOverride>
     <trimOutputLeadingWhitespace>false</trimOutputLeadingWhitespace>
     <trimOutputTrailingWhitespace>true</trimOutputTrailingWhitespace>
     <escapeOutputControlCharacters>false</escapeOutputControlCharacters>

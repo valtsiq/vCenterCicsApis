@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ns2:message xmlns:ns2="http://www.ibm.com/ims/Transaction" transactionCode="" messageName="cicsCepSerInsQ" direction="0" serviceType="CICS_COMM_AREA">
-    <message id="1" name="cicsCepSerInsQ">
+<ns2:message xmlns:ns2="http://www.ibm.com/ims/Transaction" transactionCode="" messageName="cicsCepSerP" direction="0" serviceType="CICS_COMM_AREA">
+    <message id="1" name="cicsCepSerP">
         <segment id="1" name="COMMAREA" originalName="COMMAREA">
             <field name="cep" originalName="LK_CEP" included="Y" path="cep">
                 <startPos>1</startPos>

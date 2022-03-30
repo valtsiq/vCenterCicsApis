@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<zosConnectApi xmlns="http://www.ibm.com/zosConnect/2.0/zosConnectApi" id="cicscepapiins">
-    <apiSpec title="cicscepapiins" basePath="/cicscepapiins" description="" version="1.0.0">
-        <path relativePath="/get/{cepCode}/{uf}/{cidade}/{bairro}/{logradouro}">
-            <method type="GET" zosConnectServiceRef="cicsCepSerIns" httpXformFile="api/get/{cepCode}/{uf}/{cidade}/{bairro}/{logradouro}/GET/mapping.xml" operationId="getCicsCepSerIns"></method>
-        </path>
-        <apiDoc docType="SWAGGER">api-docs/swagger.json</apiDoc>
-    </apiSpec>
-</zosConnectApi>
