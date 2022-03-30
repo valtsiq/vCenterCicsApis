@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<zosConnectApi xmlns="http://www.ibm.com/zosConnect/2.0/zosConnectApi" id="cicscepapi">
-    <apiSpec title="cicscepapi" basePath="/cicscepapi" description="Consulta endereço a partir do código postal" version="1.0.0" contactName="Valter Siqueira" contactEmail="valtsiq@gmail.com">
-        <path relativePath="/get/{cepCode}">
-            <method type="GET" zosConnectServiceRef="cicsCepSer" httpXformFile="api/get/{cepCode}/GET/mapping.xml" operationId="getCicsCepSer"></method>
-        </path>
-        <apiDoc docType="SWAGGER">api-docs/swagger.json</apiDoc>
-    </apiSpec>
-</zosConnectApi>
