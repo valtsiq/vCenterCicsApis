@@ -11,7 +11,7 @@
   "consumes" : [ "application/json" ],
   "produces" : [ "application/json" ],
   "paths" : {
-    "/newPath1" : { }
+    "/con/{cepcode}" : { }
   },
   "definitions" : { }
 }
