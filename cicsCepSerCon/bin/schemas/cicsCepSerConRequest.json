@@ -4,7 +4,7 @@
     "cep" : {
       "type" : "object",
       "properties" : {
-        "cepCode" : {
+        "code" : {
           "maxLength" : 8,
           "type" : "string"
         },

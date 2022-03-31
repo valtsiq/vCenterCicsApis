@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<zosConnectApi xmlns="http://www.ibm.com/zosConnect/2.0/zosConnectApi" id="cicscepapi">
-    <apiSpec title="cicscepapi" basePath="/cicscepapi" description="Consulta e Insere novos CEPS" version="1.0.0">
-        <path relativePath="/con/{cepcode}"/>
-        <apiDoc docType="SWAGGER">api-docs/swagger.json</apiDoc>
-    </apiSpec>
-</zosConnectApi>

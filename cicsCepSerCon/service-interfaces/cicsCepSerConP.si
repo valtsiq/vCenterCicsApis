@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ns2:message xmlns:ns2="http://www.ibm.com/ims/Transaction" transactionCode="" messageName="cicsCepSerP" direction="0" serviceType="CICS_COMM_AREA">
-    <message id="1" name="cicsCepSerP">
+<ns2:message xmlns:ns2="http://www.ibm.com/ims/Transaction" transactionCode="" messageName="cicsCepSerConP" direction="0" serviceType="CICS_COMM_AREA">
+    <message id="1" name="cicsCepSerConP">
         <segment id="1" name="COMMAREA" originalName="COMMAREA">
             <field name="cep" originalName="LK_CEP" included="Y" path="cep">
                 <startPos>1</startPos>
@@ -8,7 +8,7 @@
                 <maxBytes>100</maxBytes>
                 <remarks></remarks>
                 <applicationDatatype datatype="STRUCT"/>
-                <field name="cepCode" originalName="LK_CEPCODE" included="Y" defaultValue="" isHex="false" path="cep.cepCode" codepageConversion="Y">
+                <field name="code" originalName="LK_CEPCODE" included="Y" defaultValue="" isHex="false" path="cep.code" codepageConversion="Y">
                     <startPos>1</startPos>
                     <bytes>8</bytes>
                     <maxBytes>8</maxBytes>
