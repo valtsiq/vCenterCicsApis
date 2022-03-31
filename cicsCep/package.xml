@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<zosConnectApi xmlns="http://www.ibm.com/zosConnect/2.0/zosConnectApi" id="cicscep">
+    <apiSpec title="cicscep" basePath="/cicscep" description="Consulta e insere CEP" version="1.0.0">
+        <path relativePath="/consulta/{codigo}">
+            <method type="GET" zosConnectServiceRef="cicsCepSerCon" httpXformFile="api/consulta/{codigo}/GET/mapping.xml" operationId="getCicsCepSerCon"></method>
+        </path>
+        <path relativePath="/insere/{codigo}/{uf}/{cidade}/{bairro}/{logradouro}">
+            <method type="GET" zosConnectServiceRef="cicsCepSerIns" httpXformFile="api/insere/{codigo}/{uf}/{cidade}/{bairro}/{logradouro}/GET/mapping.xml" operationId="getCicsCepSerIns"></method>
+        </path>
+        <apiDoc docType="SWAGGER">api-docs/swagger.json</apiDoc>
+    </apiSpec>
+</zosConnectApi>

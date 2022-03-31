@@ -1,0 +1,153 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "Consulta e insere CEP",
+    "version" : "1.0.0",
+    "title" : "cicscep"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/cicscep",
+  "schemes" : [ "https", "http" ],
+  "consumes" : [ "application/json" ],
+  "produces" : [ "application/json" ],
+  "paths" : {
+    "/consulta/{codigo}" : {
+      "get" : {
+        "tags" : [ "cicscep" ],
+        "operationId" : "getCicsCepSerCon",
+        "parameters" : [ {
+          "name" : "Authorization",
+          "in" : "header",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "codigo",
+          "in" : "path",
+          "required" : true,
+          "type" : "string",
+          "maxLength" : 8
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : "#/definitions/getCicsCepSerCon_response_200"
+            }
+          }
+        }
+      }
+    },
+    "/insere/{codigo}/{uf}/{cidade}/{bairro}/{logradouro}" : {
+      "get" : {
+        "tags" : [ "cicscep" ],
+        "operationId" : "getCicsCepSerIns",
+        "parameters" : [ {
+          "name" : "Authorization",
+          "in" : "header",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "uf",
+          "in" : "path",
+          "required" : true,
+          "type" : "string",
+          "maxLength" : 2
+        }, {
+          "name" : "codigo",
+          "in" : "path",
+          "required" : true,
+          "type" : "string",
+          "maxLength" : 8
+        }, {
+          "name" : "cidade",
+          "in" : "path",
+          "required" : true,
+          "type" : "string",
+          "maxLength" : 30
+        }, {
+          "name" : "bairro",
+          "in" : "path",
+          "required" : true,
+          "type" : "string",
+          "maxLength" : 30
+        }, {
+          "name" : "logradouro",
+          "in" : "path",
+          "required" : true,
+          "type" : "string",
+          "maxLength" : 30
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : "#/definitions/getCicsCepSerIns_response_200"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "getCicsCepSerCon_response_200" : {
+      "type" : "object",
+      "properties" : {
+        "cep" : {
+          "type" : "object",
+          "properties" : {
+            "codigo" : {
+              "type" : "string",
+              "maxLength" : 8
+            },
+            "uf" : {
+              "type" : "string",
+              "maxLength" : 2
+            },
+            "cidade" : {
+              "type" : "string",
+              "maxLength" : 30
+            },
+            "bairro" : {
+              "type" : "string",
+              "maxLength" : 30
+            },
+            "logradouro" : {
+              "type" : "string",
+              "maxLength" : 30
+            }
+          }
+        }
+      }
+    },
+    "getCicsCepSerIns_response_200" : {
+      "type" : "object",
+      "properties" : {
+        "cep" : {
+          "type" : "object",
+          "properties" : {
+            "codigo" : {
+              "type" : "string",
+              "maxLength" : 8
+            },
+            "uf" : {
+              "type" : "string",
+              "maxLength" : 2
+            },
+            "cidade" : {
+              "type" : "string",
+              "maxLength" : 30
+            },
+            "bairro" : {
+              "type" : "string",
+              "maxLength" : 30
+            },
+            "logradouro" : {
+              "type" : "string",
+              "maxLength" : 30
+            }
+          }
+        }
+      }
+    }
+  }
+}
