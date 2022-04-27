@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<zosConnectApi xmlns="http://www.ibm.com/zosConnect/2.0/zosConnectApi" id="xcepapi">
+    <apiSpec title="xcepapi" basePath="/xcepapi" description="" version="1.0.0">
+        <path relativePath="/consulta/{codigo}">
+            <method type="GET" zosConnectServiceRef="xCepCon" httpXformFile="api/consulta/{codigo}/GET/mapping.xml" operationId="getXCepCon"></method>
+        </path>
+        <apiDoc docType="SWAGGER">api-docs/swagger.json</apiDoc>
+    </apiSpec>
+</zosConnectApi>
