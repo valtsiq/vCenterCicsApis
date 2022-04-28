@@ -1,0 +1,57 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "Nova API para consulta CEP",
+    "version" : "1.0.0",
+    "title" : "xcep"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/xcep",
+  "schemes" : [ "https", "http" ],
+  "consumes" : [ "application/json" ],
+  "produces" : [ "application/json" ],
+  "paths" : {
+    "/consulta/{code}" : {
+      "get" : {
+        "tags" : [ "xcep" ],
+        "operationId" : "getXCepSerCon",
+        "parameters" : [ {
+          "name" : "Authorization",
+          "in" : "header",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "code",
+          "in" : "path",
+          "required" : true,
+          "type" : "string",
+          "maxLength" : 8
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : "#/definitions/getXCepSerCon_response_200"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "getXCepSerCon_response_200" : {
+      "type" : "object",
+      "properties" : {
+        "cep" : {
+          "type" : "object",
+          "properties" : {
+            "code" : {
+              "type" : "string",
+              "maxLength" : 8
+            }
+          }
+        }
+      }
+    }
+  }
+}
