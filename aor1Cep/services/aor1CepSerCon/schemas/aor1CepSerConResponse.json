@@ -1,0 +1,30 @@
+{
+  "type" : "object",
+  "properties" : {
+    "LK_CEP" : {
+      "type" : "object",
+      "properties" : {
+        "LK_CEPCODE" : {
+          "maxLength" : 8,
+          "type" : "string"
+        },
+        "LK_UF" : {
+          "maxLength" : 2,
+          "type" : "string"
+        },
+        "LK_CIDADE" : {
+          "maxLength" : 30,
+          "type" : "string"
+        },
+        "LK_BAIRRO" : {
+          "maxLength" : 30,
+          "type" : "string"
+        },
+        "LK_LOGRADOURO" : {
+          "maxLength" : 30,
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

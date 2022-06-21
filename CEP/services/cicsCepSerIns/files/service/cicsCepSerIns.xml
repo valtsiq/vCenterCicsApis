@@ -14,10 +14,10 @@
                 <segment segmentName="COMMAREA">
                     <interfaceField included="Y" fieldName="cep">
                         <field included="Y" fieldName="codigo" isHex="false"/>
-                        <field included="Y" fieldName="uf" isHex="false"/>
-                        <field included="Y" fieldName="cidade" isHex="false"/>
-                        <field included="Y" fieldName="bairro" isHex="false"/>
-                        <field included="Y" fieldName="logradouro" isHex="false"/>
+                        <field included="N" fieldName="uf" isHex="false"/>
+                        <field included="N" fieldName="cidade" isHex="false"/>
+                        <field included="N" fieldName="bairro" isHex="false"/>
+                        <field included="N" fieldName="logradouro" isHex="false"/>
                     </interfaceField>
                 </segment>
             </interface>
@@ -25,16 +25,16 @@
         <version>0</version>
     </serviceInputInterface>
     <serviceOutputInterface>
-        <metadataName>cicsCepSerInsP.si</metadataName>
+        <metadataName>cicsCepSerInsQ.si</metadataName>
         <serviceInterface>
             <interface>
                 <segment segmentName="COMMAREA">
                     <interfaceField included="Y" fieldName="cep">
                         <field included="Y" fieldName="codigo" isHex="false"/>
-                        <field included="Y" fieldName="uf" isHex="false"/>
-                        <field included="Y" fieldName="cidade" isHex="false"/>
-                        <field included="Y" fieldName="bairro" isHex="false"/>
-                        <field included="Y" fieldName="logradouro" isHex="false"/>
+                        <field included="N" fieldName="uf" isHex="false"/>
+                        <field included="N" fieldName="cidade" isHex="false"/>
+                        <field included="N" fieldName="bairro" isHex="false"/>
+                        <field included="N" fieldName="logradouro" isHex="false"/>
                     </interfaceField>
                 </segment>
             </interface>

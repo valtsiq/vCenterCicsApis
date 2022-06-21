@@ -1,0 +1,14 @@
+{
+  "type" : "object",
+  "properties" : {
+    "LK_CEP" : {
+      "type" : "object",
+      "properties" : {
+        "LK_CEPCODE" : {
+          "maxLength" : 8,
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

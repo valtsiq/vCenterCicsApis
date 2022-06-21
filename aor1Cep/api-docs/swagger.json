@@ -1,0 +1,73 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "",
+    "version" : "1.0.0",
+    "title" : "aor1cep"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/aor1cep",
+  "schemes" : [ "https", "http" ],
+  "consumes" : [ "application/json" ],
+  "produces" : [ "application/json" ],
+  "paths" : {
+    "/aor1Cep/Con/{cepCode}" : {
+      "get" : {
+        "tags" : [ "aor1cep" ],
+        "operationId" : "getAor1CepSerCon",
+        "parameters" : [ {
+          "name" : "Authorization",
+          "in" : "header",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "cepCode",
+          "in" : "path",
+          "required" : true,
+          "type" : "string",
+          "maxLength" : 8
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : "#/definitions/getAor1CepSerCon_response_200"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "getAor1CepSerCon_response_200" : {
+      "type" : "object",
+      "properties" : {
+        "LK_CEP" : {
+          "type" : "object",
+          "properties" : {
+            "LK_CEPCODE" : {
+              "type" : "string",
+              "maxLength" : 8
+            },
+            "LK_UF" : {
+              "type" : "string",
+              "maxLength" : 2
+            },
+            "LK_CIDADE" : {
+              "type" : "string",
+              "maxLength" : 30
+            },
+            "LK_BAIRRO" : {
+              "type" : "string",
+              "maxLength" : 30
+            },
+            "LK_LOGRADOURO" : {
+              "type" : "string",
+              "maxLength" : 30
+            }
+          }
+        }
+      }
+    }
+  }
+}
