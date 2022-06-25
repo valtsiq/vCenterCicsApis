@@ -1,0 +1,177 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. CEPTST.
+      ******************************************************************
+      * Valter Siqueira - z Systems
+      * Laboratorat¢rio de uso particular ......
+      * ----------------------------------------------------------------
+      * Sistema .............. CEP
+      * Programa.............. CEPBLOAD
+      * Tipo    .............. BATCH
+      * Finalidade ........... Realizar a carga do arquivos VSAM
+      *                        "CEPVSA01" a partir do arquivo
+      *                        sequencial "CEPSEQ01".
+      *                        O arquivo sequencial est† em formato
+      *                        CSV. As virgulas s∆o retiradas e os
+      *                        campos ajustados antes de inseridos
+      *                        no arquivo VSAM.
+      * DSnames .............. B090290.CEPVSA01
+      *                        B090290.CEPSEQ01
+      * JOB def cluster ...... B090290.LIB.JCL(CEPDFCLU)
+      *
+      ******************************************************************
+       ENVIRONMENT DIVISION.
+       INPUT-OUTPUT SECTION.
+       FILE-CONTROL.
+      *INPUT-OUTPUT FILE
+           SELECT CEPV0001 ASSIGN TO 'CEPV0001'
+           ORGANIZATION IS SEQUENTIAL
+      *    ACCESS MODE IS SEQUENTIAL
+      *    RECORD KEY IS CEPV0001-CEP
+           FILE STATUS WK-VSAM-FILE-STATUS.
+      *
+      *    SELECT CEPV0001 ASSIGN TO 'CEPV0001'
+      *    ORGANIZATION SEQUENTIAL.
+
+           SELECT CEPS0001 ASSIGN TO 'CEPS0001'
+           ORGANIZATION SEQUENTIAL.
+      *
+       DATA DIVISION.
+       FILE SECTION.
+
+       FD CEPS0001
+            RECORDING MODE IS F
+            RECORD CONTAINS 120 CHARACTERS.
+       01 CEPS0001-REC                  PIC  X(120) VALUE SPACES.
+      *
+       FD CEPV0001.
+       01 CEPV0001-REC.
+          05 CEPV0001-CEP               PIC  X(008).
+          05 CEPV0001-UF                PIC  X(002).
+          05 CEPV0001-CIDADE            PIC  X(030).
+          05 CEPV0001-BAIRRO            PIC  X(030).
+          05 CEPV0001-LOGRADOURO        PIC  X(030).
+      *
+       WORKING-STORAGE SECTION.
+        01 WORKING-AREAS.
+           03 WK-CEP-REC                PIC  X(120) VALUE SPACES.
+           03 WK-CEP-REC-RED  REDEFINES WK-CEP-REC.
+              05 WK-CEP-REC-BYTE        PIC  X(001) OCCURS 120 TIMES.
+           03 WK-CEP-FILL               PIC  X(030) VALUE SPACES.
+           03 WK-CEP-FILL-RED REDEFINES WK-CEP-FILL.
+              05 WK-CEP-FILL-BYTE       PIC  X(001) OCCURS 030 TIMES.
+           03 WK-CONT-BYTE-REC          PIC  9(010) VALUE ZEROS.
+           03 WK-CONT-BYTE-FILL         PIC  9(010) VALUE ZEROS.
+           03 WK-CONT-FILL              PIC  9(010) VALUE 1.
+           03 WK-CONT-REC               PIC  9(010) VALUE ZEROS.
+           03 WK-EOF                    PIC  X(001) VALUE 'N'.
+           03 WK-VSAM-FILE-STATUS       PIC  X(002) VALUE SPACES.
+           03 WK-DIV                    PIC  9(010) VALUE ZEROES.
+           03 WK-DIV-RESTO              PIC  9(010) VALUE ZEROES.
+
+       PROCEDURE DIVISION.
+      *
+       MAIN-PARA.
+           PERFORM OPEN-FILES
+           PERFORM READ-FILE UNTIL WK-EOF EQUAL 'Y'
+
+           DISPLAY '---------------------------------------------'
+           DISPLAY 'FINAL DO PROCESSAMENTO - TOTOAL DE REGISTORS '
+           DISPLAY WK-CONT-REC
+           DISPLAY '---------------------------------------------'
+
+           PERFORM CLOSE-FILES
+           STOP RUN
+           .
+       OPEN-FILES.
+           OPEN INPUT  CEPS0001
+           OPEN OUTPUT CEPV0001
+           .
+       READ-FILE.
+
+           MOVE 0            TO  WK-CONT-BYTE-REC
+           MOVE 0            TO  WK-CONT-BYTE-FILL
+           MOVE SPACES       TO  WK-CEP-REC
+           MOVE SPACES       TO  WK-CEP-FILL
+           ADD  1            TO  WK-CONT-REC
+
+           READ CEPS0001 RECORD AT END MOVE 'Y' TO WK-EOF.
+
+           IF WK-EOF NOT = 'Y'
+              DIVIDE WK-CONT-REC BY 50000
+              GIVING WK-DIV REMAINDER WK-DIV-RESTO
+
+              IF WK-DIV-RESTO = 0
+                 DISPLAY '---------------------------------------------'
+                 DISPLAY ' TOTAL PARCIAL REGISTORS '
+                 DISPLAY WK-CONT-REC
+                 DISPLAY '---------------------------------------------'
+              END-IF
+
+              PERFORM PROCESSA-REGISTRO
+           END-IF
+           .
+       PROCESSA-REGISTRO.
+           MOVE SPACES       TO  CEPV0001-REC
+           MOVE CEPS0001-REC TO  WK-CEP-REC
+           MOVE SPACES       TO  WK-CEP-FILL
+
+           PERFORM MONTA-REGISTRO UNTIL WK-CONT-BYTE-REC = 120
+
+           PERFORM GRAVA-REGISTRO
+
+           MOVE 0            TO WK-CONT-BYTE-REC
+           MOVE 0            TO WK-CONT-BYTE-FILL
+           MOVE SPACES       TO WK-CEP-FILL
+           .
+       MONTA-REGISTRO.
+
+           ADD 1             TO  WK-CONT-BYTE-REC
+           ADD 1             TO  WK-CONT-BYTE-FILL
+
+           IF WK-CEP-REC-BYTE(WK-CONT-BYTE-REC) NOT =  ','
+              AND WK-CONT-BYTE-FILL < 30
+              MOVE WK-CEP-REC-BYTE (WK-CONT-BYTE-REC)
+              TO   WK-CEP-FILL-BYTE (WK-CONT-BYTE-FILL)
+           ELSE
+              EVALUATE WK-CONT-FILL
+               WHEN 1
+                   ADD  1                TO WK-CONT-FILL
+                   MOVE WK-CEP-FILL      TO CEPV0001-CEP
+               WHEN 2
+                   ADD  1                TO WK-CONT-FILL
+                   MOVE WK-CEP-FILL      TO CEPV0001-UF
+               WHEN 3
+                   ADD  1                TO WK-CONT-FILL
+                   MOVE WK-CEP-FILL      TO CEPV0001-CIDADE
+               WHEN 4
+                   ADD  1                TO WK-CONT-FILL
+                   MOVE WK-CEP-FILL      TO CEPV0001-BAIRRO
+               WHEN 5
+                   MOVE WK-CEP-FILL      TO CEPV0001-LOGRADOURO
+                   move 120              TO WK-CONT-BYTE-REC
+                   move 1                to WK-CONT-FILL
+               END-EVALUATE
+               MOVE SPACES               TO WK-CEP-FILL
+               MOVE 0                    TO WK-CONT-BYTE-FILL
+           END-IF
+           .
+       GRAVA-REGISTRO.
+           MOVE 0            TO WK-CONT-BYTE-REC
+           MOVE 0            TO WK-CONT-BYTE-FILL
+           MOVE SPACES       TO WK-CEP-FILL
+
+           write CEPV0001-REC
+
+           IF WK-VSAM-FILE-STATUS NOT = '00'
+              DISPLAY "-----ERRO VSAM -----"
+              DISPLAY WK-VSAM-FILE-STATUS
+              PERFORM CLOSE-FILES
+              STOP RUN
+           END-IF
+
+           MOVE SPACES TO CEPV0001-REC
+           .
+       CLOSE-FILES.
+           CLOSE CEPV0001
+           CLOSE CEPS0001
+           .

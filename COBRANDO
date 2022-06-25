@@ -1,0 +1,81 @@
+      *****************************************************************
+      * PoT para Tivit / Cielo
+      *****************************************************************
+       identification division.
+       program-id.    cobrando.
+       environment    division.
+       configuration  section.
+       data           division.
+       working-storage section.
+      *----------------------------------------------------------------*
+      *   GENERIC WORK VARIABLES                                       *
+      *----------------------------------------------------------------*
+       01 work-storage.
+          03 filler             pic x(0010) value 'work-initi'.
+          03 wk-cep.
+             05 wk-cep-01       pic 9(002).
+             05 wk-cep-02       pic 9(002).
+             05 wk-cep-03       pic 9(002).
+             05 wk-cep-04       pic 9(002).
+          03 wk-number          pic 9(002)v9(004) comp-3 value zeroes.
+          03 wk-palpite         pic 9(002).
+          03 wk-random          pic 9(002)v9(004) comp-3 value zeroes.
+          03 wk-loop            pic 9(0004) value zeroes.
+          03 wk-force-stop      pic 9(0004) value zeroes.
+          03 wk-palpite-occ     occurs 60 times.
+             05 wk-palpite-item pic 9(001).
+
+          03 wk-num-cp3         pic s9(004) comp-3 value zeroes.
+          03 wk-sqr-cp3         pic s9(4)v9(4) comp-3 value zeroes.
+          03 wk-num-cp5         pic s9(004) comp-5 value zeroes.
+          03 wk-exp-cp5         pic s9(015) comp-5 value zeroes.
+          03 wk-print-sqr       pic 999.999,999999999 value zeroes.
+
+      ******************************************************************
+      *    L I N K A G E   S E C T I O N
+      ******************************************************************
+       linkage section.
+       01  PARM-BUFFER.
+           05  PARM-LENGTH         pic S9(4)   comp.
+           05  PARM-DATA           pic 9(8).
+           05  filler              pic x(1).
+           05  parm-palpites       pic 9(1).
+
+      *****************************************************************
+      *    P R O C E D U R E S
+      *****************************************************************
+       procedure division using PARM-BUFFER.
+
+      *----------------------------------------------------------------
+       mainline section.
+              COMPUTE wk-number = FUNCTION RANDOM(PARM-DATA)
+              compute wk-palpite  = function integer(wk-number)
+              DISPLAY '-----------------------------------'
+              DISPLAY PARM-DATA
+              display wk-palpite
+              DISPLAY '-----------------------------------'
+           PERFORM until wk-loop = parm-palpites
+              COMPUTE wk-number = FUNCTION RANDOM * 61
+              compute wk-palpite = FUNCTION INTEGER(wk-number)
+              if wk-palpite-item(wk-palpite) = 0
+                 move 1 to wk-palpite-item(wk-palpite)
+                 DISPLAY 'RANDOM NUMBER:' wk-palpite
+                 add 1 to wk-loop
+              END-IF
+
+              add 1 to wk-force-stop
+
+              if wk-force-stop = 1000
+                 DISPLAY '-----------------------------------'
+                 DISPLAY 'forcei goback                      '
+                 DISPLAY '-----------------------------------'
+                 goback
+              END-IF
+           END-PERFORM
+              DISPLAY '-----------------------------------'
+              DISPLAY wk-force-stop
+              DISPLAY '-----------------------------------'
+           .
+       gbk.
+           goback
+           .

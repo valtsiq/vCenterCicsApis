@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>vCenterCobolSourcesBatch</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>CEPCICS1</name>
+			<type>1</type>
+			<location>C:/Users/VALTERSiqueira/projectsGit/vCenterCobolSourcesOnline/CEPCICS1</location>
+		</link>
+	</linkedResources>
+</projectDescription>
