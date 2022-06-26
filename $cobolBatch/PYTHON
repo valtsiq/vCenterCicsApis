@@ -1,9 +1,0 @@
-//B015951X JOB (ACCT),LUCASHIAGO,
-//            CLASS=A,MSGCLASS=H,NOTIFY=&SYSUID
-$ vi test_script_ebcdic_enc.py
-def main():
- print("hello world!")
-if __name__ == "__main__":
- main()
-$ chtag -tc IBM-1047 test_script_ebcdic_enc.py
-$ python3 test_script_ebcdic_enc.py
