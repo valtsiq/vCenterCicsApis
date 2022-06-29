@@ -2,7 +2,7 @@
        PROGRAM-ID. BATCH002.
 
        ENVIRONMENT DIVISION.
-
+      *--------------------------------------------
        INPUT-OUTPUT SECTION.
          FILE-CONTROL.
               SELECT BINCARD1 ASSIGN TO 'BIN00001'
