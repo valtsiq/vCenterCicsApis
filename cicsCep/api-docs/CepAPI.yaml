@@ -76,9 +76,7 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/getCicsCepSerIns_response_200"
-servers:
-  - url: https://localhost:8080/cicscep
-  - url: http://localhost:8080/cicscep
+
 components:
   schemas:
     getCicsCepSerCon_response_200:
