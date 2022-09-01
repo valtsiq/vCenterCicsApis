@@ -58,4 +58,5 @@
     <enforceMinArrayOccurrenceResponse>false</enforceMinArrayOccurrenceResponse>
     <ldsStartsWithLLZZTRANCODE>false</ldsStartsWithLLZZTRANCODE>
     <ldsStartsWithLLZZ>false</ldsStartsWithLLZZ>
+    <truncateInputLastCharField>false</truncateInputLastCharField>
 </service>
