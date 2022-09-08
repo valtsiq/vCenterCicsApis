@@ -4,5 +4,11 @@
     <requestMessage>
         <mappingRootModel type="MSL" location="api/consulta/{codigo}/GET/request.map"/>
     </requestMessage>
+    <responseMessages code="500" description="Internal Server Error">
+        <booleanExpression id="Rule 1" op="EQUAL">
+            <left>cep/codigo</left>
+            <right>x</right>
+        </booleanExpression>
+    </responseMessages>
     <responseMessages code="200" description="OK"/>
 </ns2:ZosConnectServiceMapping>

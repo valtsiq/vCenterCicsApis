@@ -28,6 +28,12 @@
           "maxLength" : 8
         } ],
         "responses" : {
+          "500" : {
+            "description" : "Internal Server Error",
+            "schema" : {
+              "$ref" : "#/definitions/getCicsCepSerCon_response_500"
+            }
+          },
           "200" : {
             "description" : "OK",
             "schema" : {
@@ -89,6 +95,36 @@
     }
   },
   "definitions" : {
+    "getCicsCepSerCon_response_500" : {
+      "type" : "object",
+      "properties" : {
+        "cep" : {
+          "type" : "object",
+          "properties" : {
+            "codigo" : {
+              "type" : "string",
+              "maxLength" : 8
+            },
+            "uf" : {
+              "type" : "string",
+              "maxLength" : 2
+            },
+            "cidade" : {
+              "type" : "string",
+              "maxLength" : 30
+            },
+            "bairro" : {
+              "type" : "string",
+              "maxLength" : 30
+            },
+            "logradouro" : {
+              "type" : "string",
+              "maxLength" : 30
+            }
+          }
+        }
+      }
+    },
     "getCicsCepSerCon_response_200" : {
       "type" : "object",
       "properties" : {
