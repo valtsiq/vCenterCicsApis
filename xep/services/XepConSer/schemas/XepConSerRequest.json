@@ -1,0 +1,14 @@
+{
+  "type" : "object",
+  "properties" : {
+    "CEP" : {
+      "type" : "object",
+      "properties" : {
+        "CODIGO" : {
+          "maxLength" : 8,
+          "type" : "string"
+        }
+      }
+    }
+  }
+}
