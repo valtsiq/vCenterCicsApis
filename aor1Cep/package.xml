@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<zosConnectApi xmlns="http://www.ibm.com/zosConnect/2.0/zosConnectApi" id="aor1cep">
-    <apiSpec title="aor1cep" basePath="/aor1cep" description="" version="1.0.0">
-        <path relativePath="/aor1Cep/Con/{cepCode}">
-            <method type="GET" zosConnectServiceRef="aor1CepSerCon" httpXformFile="api/aor1Cep/Con/{cepCode}/GET/mapping.xml" operationId="getAor1CepSerCon"></method>
-        </path>
-        <apiDoc docType="SWAGGER">api-docs/swagger.json</apiDoc>
-    </apiSpec>
-</zosConnectApi>
