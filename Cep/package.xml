@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<zosConnectApi xmlns="http://www.ibm.com/zosConnect/2.0/zosConnectApi" id="cep">
-    <apiSpec title="cep" basePath="/cep" description="Sistema CEP, Codigo de Endereçamento Postal" version="1.0.0">
-        <path relativePath="/Consulta/{codigo}">
-            <method type="GET" zosConnectServiceRef="CepSerConsulta" httpXformFile="api/Consulta/{codigo}/GET/mapping.xml" operationId="getCepSerConsulta"></method>
-        </path>
-        <apiDoc docType="SWAGGER">api-docs/swagger.json</apiDoc>
-    </apiSpec>
-</zosConnectApi>
