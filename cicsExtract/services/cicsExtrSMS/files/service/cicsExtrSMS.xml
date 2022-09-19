@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns:ns2="http://www.ibm.com/ims/Transaction">
+    <shallow>true</shallow>
+    <serviceName>cicsExtrSMS</serviceName>
+    <serviceType>ims-rest</serviceType>
+    <resourceType>TRAN</resourceType>
+    <status>1</status>
+    <conversionType>3</conversionType>
+    <dataProtocol>0</dataProtocol>
+    <serviceInputInterface>
+        <metadataName>cicsExtrSMS.si</metadataName>
+        <serviceInterface>
+            <interface>
+                <segment segmentName="COMMAREA">
+                    <interfaceField included="Y" fieldName="DFHSMXDS">
+                        <field included="N" fieldName="SMXLEN"/>
+                        <field included="N" fieldName="SMXID"/>
+                        <field included="N" fieldName="SMXDVERS"/>
+                        <field included="N" fieldName="FILL_0"/>
+                        <field included="N" fieldName="SMXGBLLEN"/>
+                        <field included="N" fieldName="SMXNPAGP"/>
+                        <field included="N" fieldName="SMXSTGPROT"/>
+                        <field included="N" fieldName="SMXRENTPGM"/>
+                        <field included="N" fieldName="SMXTRANISO"/>
+                        <field included="N" fieldName="SMXMEMLIMITSRC"/>
+                        <field included="N" fieldName="SMXUSSCUR"/>
+                        <field included="N" fieldName="SMXUSSCUM"/>
+                        <field included="N" fieldName="SMXUSSHWM"/>
+                        <field included="N" fieldName="SMXCSSCUR"/>
+                        <field included="N" fieldName="SMXCSSCUM"/>
+                        <field included="N" fieldName="SMXCSSHWM"/>
+                        <field included="N" fieldName="SMXDSALIMIT"/>
+                        <field included="N" fieldName="SMXEDSALIMIT"/>
+                        <field included="N" fieldName="SMXDSATOTAL"/>
+                        <field included="N" fieldName="SMXEDSATOTAL"/>
+                        <field included="N" fieldName="SMXHWMDSATOTAL"/>
+                        <field included="N" fieldName="SMXHWMEDSATOTAL"/>
+                        <field included="N" fieldName="SMXTIMEWAITMVS"/>
+                        <field included="N" fieldName="SMXMVSSTGREQWAITS"/>
+                        <field included="N" fieldName="FILL_1"/>
+                        <field included="N" fieldName="FILL_2"/>
+                        <field included="N" fieldName="FILL_3"/>
+                        <field included="N" fieldName="SMX_MEMLIMIT"/>
+                        <field included="N" fieldName="SMX_GETSTOR_SIZE"/>
+                        <field included="N" fieldName="SMX_AS_ACTIVE"/>
+                        <field included="N" fieldName="SMX_HWM_AS_ACTIVE"/>
+                        <field included="N" fieldName="SMX_GDSA_ACTIVE"/>
+                        <field included="N" fieldName="SMX_HWM_GDSA_ACTIVE"/>
+                        <field included="N" fieldName="SMX_GDSA_ALLOCATED"/>
+                        <field included="N" fieldName="SMX_HWM_GDSA_ALLOCATED"/>
+                        <field included="N" fieldName="FILL_4"/>
+                        <field included="N" fieldName="FILL_5"/>
+                        <field included="N" fieldName="FILL_6"/>
+                        <field included="N" fieldName="FILL_7"/>
+                        <field included="N" fieldName="FILL_8"/>
+                        <field included="N" fieldName="SMXLVABYTES"/>
+                        <field included="N" fieldName="SMXLVHBYTES"/>
+                        <field included="N" fieldName="SMXLVGBYTES"/>
+                        <field included="N" fieldName="SMXLVNMEMOBJ"/>
+                        <field included="N" fieldName="FILL_9"/>
+                        <field included="N" fieldName="SMXFROMGUARDFAIL"/>
+                        <field included="N" fieldName="SMXFROMGUARDFAILSIZE"/>
+                        <field included="N" fieldName="FILL_10"/>
+                        <field included="N" fieldName="SMXLVSHRBYTES"/>
+                        <field included="N" fieldName="SMXLVSHRGBYTES"/>
+                        <field included="N" fieldName="SMXLVSHRNMEMOBJ"/>
+                        <field included="N" fieldName="FILL_11"/>
+                        <field included="N" fieldName="SMXHVAUXSLOTS"/>
+                        <field included="N" fieldName="SMXHVGAUXSLOTS"/>
+                        <field included="N" fieldName="SMXHVPAGESINREAL"/>
+                        <field included="N" fieldName="SMXHVGPAGESINREAL"/>
+                        <field included="N" fieldName="SMXLARGEMEMOBJ"/>
+                        <field included="N" fieldName="SMXLARGEPAGESINREAL"/>
+                        <field included="N" fieldName="FILL_12"/>
+                        <field included="N" fieldName="FILL_13"/>
+                        <field included="N" fieldName="FILL_14"/>
+                        <field included="N" fieldName="FILL_15"/>
+                        <field included="N" fieldName="SMXBODY">
+                            <field included="N" fieldName="SMXDSANAME"/>
+                            <field included="N" fieldName="SMXLOCN"/>
+                            <field included="N" fieldName="SMXACCESS"/>
+                            <field included="N" fieldName="SMXDSAINDEX"/>
+                            <field included="N" fieldName="FILL_16"/>
+                            <field included="N" fieldName="SMXDSASZ"/>
+                            <field included="N" fieldName="SMXHWMDSASZ"/>
+                            <field included="N" fieldName="SMXCSIZE"/>
+                            <field included="N" fieldName="SMXGMREQ"/>
+                            <field included="N" fieldName="SMXFMREQ"/>
+                            <field included="N" fieldName="SMXASR"/>
+                            <field included="N" fieldName="SMXDSR"/>
+                            <field included="N" fieldName="SMXCRISS"/>
+                            <field included="N" fieldName="SMXUCSS"/>
+                            <field included="N" fieldName="SMXCSS"/>
+                            <field included="N" fieldName="SMXHWMSS"/>
+                            <field included="N" fieldName="SMXPWWS"/>
+                            <field included="N" fieldName="SMXCREL"/>
+                            <field included="N" fieldName="SMXSOS"/>
+                            <field included="N" fieldName="FILL_17"/>
+                            <field included="N" fieldName="SMXTSOS"/>
+                            <field included="N" fieldName="SMXCSUBP"/>
+                            <field included="N" fieldName="SMXFSTG"/>
+                            <field included="N" fieldName="SMXHWMFSTG"/>
+                            <field included="N" fieldName="SMXLWMFSTG"/>
+                            <field included="N" fieldName="SMXLFA"/>
+                            <field included="N" fieldName="SMXSV"/>
+                            <field included="N" fieldName="SMXEXTS"/>
+                            <field included="N" fieldName="SMXEXTSA"/>
+                            <field included="N" fieldName="SMXEXTSR"/>
+                            <field included="N" fieldName="FILL_18"/>
+                            <field included="N" fieldName="FILL_19"/>
+                            <field included="N" fieldName="FILL_20"/>
+                        </field>
+                    </interfaceField>
+                </segment>
+            </interface>
+        </serviceInterface>
+        <version>0</version>
+    </serviceInputInterface>
+    <serviceOutputInterface>
+        <metadataName>cicsExtrSMSP.si</metadataName>
+        <serviceInterface>
+            <interface>
+                <segment segmentName="COMMAREA">
+                    <interfaceField included="Y" fieldName="DFHSMXDS">
+                        <field included="Y" fieldName="SMXLEN"/>
+                        <field included="Y" fieldName="SMXID"/>
+                        <field included="Y" fieldName="SMXDVERS"/>
+                        <field included="Y" fieldName="FILL_0"/>
+                        <field included="Y" fieldName="SMXGBLLEN"/>
+                        <field included="N" fieldName="SMXNPAGP"/>
+                        <field included="Y" fieldName="SMXSTGPROT"/>
+                        <field included="Y" fieldName="SMXRENTPGM"/>
+                        <field included="Y" fieldName="SMXTRANISO"/>
+                        <field included="Y" fieldName="SMXMEMLIMITSRC"/>
+                        <field included="Y" fieldName="SMXUSSCUR"/>
+                        <field included="Y" fieldName="SMXUSSCUM"/>
+                        <field included="Y" fieldName="SMXUSSHWM"/>
+                        <field included="Y" fieldName="SMXCSSCUR"/>
+                        <field included="Y" fieldName="SMXCSSCUM"/>
+                        <field included="Y" fieldName="SMXCSSHWM"/>
+                        <field included="Y" fieldName="SMXDSALIMIT"/>
+                        <field included="Y" fieldName="SMXEDSALIMIT"/>
+                        <field included="Y" fieldName="SMXDSATOTAL"/>
+                        <field included="Y" fieldName="SMXEDSATOTAL"/>
+                        <field included="Y" fieldName="SMXHWMDSATOTAL"/>
+                        <field included="Y" fieldName="SMXHWMEDSATOTAL"/>
+                        <field included="Y" fieldName="SMXTIMEWAITMVS"/>
+                        <field included="Y" fieldName="SMXMVSSTGREQWAITS"/>
+                        <field included="Y" fieldName="FILL_1"/>
+                        <field included="Y" fieldName="FILL_2"/>
+                        <field included="Y" fieldName="FILL_3"/>
+                        <field included="Y" fieldName="SMX_MEMLIMIT"/>
+                        <field included="Y" fieldName="SMX_GETSTOR_SIZE"/>
+                        <field included="Y" fieldName="SMX_AS_ACTIVE"/>
+                        <field included="Y" fieldName="SMX_HWM_AS_ACTIVE"/>
+                        <field included="Y" fieldName="SMX_GDSA_ACTIVE"/>
+                        <field included="Y" fieldName="SMX_HWM_GDSA_ACTIVE"/>
+                        <field included="Y" fieldName="SMX_GDSA_ALLOCATED"/>
+                        <field included="Y" fieldName="SMX_HWM_GDSA_ALLOCATED"/>
+                        <field included="Y" fieldName="FILL_4"/>
+                        <field included="Y" fieldName="FILL_5"/>
+                        <field included="Y" fieldName="FILL_6"/>
+                        <field included="Y" fieldName="FILL_7"/>
+                        <field included="Y" fieldName="FILL_8"/>
+                        <field included="Y" fieldName="SMXLVABYTES"/>
+                        <field included="Y" fieldName="SMXLVHBYTES"/>
+                        <field included="Y" fieldName="SMXLVGBYTES"/>
+                        <field included="Y" fieldName="SMXLVNMEMOBJ"/>
+                        <field included="Y" fieldName="FILL_9"/>
+                        <field included="Y" fieldName="SMXFROMGUARDFAIL"/>
+                        <field included="Y" fieldName="SMXFROMGUARDFAILSIZE"/>
+                        <field included="Y" fieldName="FILL_10"/>
+                        <field included="Y" fieldName="SMXLVSHRBYTES"/>
+                        <field included="Y" fieldName="SMXLVSHRGBYTES"/>
+                        <field included="Y" fieldName="SMXLVSHRNMEMOBJ"/>
+                        <field included="Y" fieldName="FILL_11"/>
+                        <field included="Y" fieldName="SMXHVAUXSLOTS"/>
+                        <field included="Y" fieldName="SMXHVGAUXSLOTS"/>
+                        <field included="Y" fieldName="SMXHVPAGESINREAL"/>
+                        <field included="Y" fieldName="SMXHVGPAGESINREAL"/>
+                        <field included="Y" fieldName="SMXLARGEMEMOBJ"/>
+                        <field included="Y" fieldName="SMXLARGEPAGESINREAL"/>
+                        <field included="Y" fieldName="FILL_12"/>
+                        <field included="Y" fieldName="FILL_13"/>
+                        <field included="Y" fieldName="FILL_14"/>
+                        <field included="Y" fieldName="FILL_15"/>
+                        <field included="Y" fieldName="SMXBODY">
+                            <field included="Y" fieldName="SMXDSANAME"/>
+                            <field included="Y" fieldName="SMXLOCN"/>
+                            <field included="Y" fieldName="SMXACCESS"/>
+                            <field included="Y" fieldName="SMXDSAINDEX"/>
+                            <field included="Y" fieldName="FILL_16"/>
+                            <field included="Y" fieldName="SMXDSASZ"/>
+                            <field included="Y" fieldName="SMXHWMDSASZ"/>
+                            <field included="Y" fieldName="SMXCSIZE"/>
+                            <field included="Y" fieldName="SMXGMREQ"/>
+                            <field included="Y" fieldName="SMXFMREQ"/>
+                            <field included="Y" fieldName="SMXASR"/>
+                            <field included="Y" fieldName="SMXDSR"/>
+                            <field included="Y" fieldName="SMXCRISS"/>
+                            <field included="Y" fieldName="SMXUCSS"/>
+                            <field included="Y" fieldName="SMXCSS"/>
+                            <field included="Y" fieldName="SMXHWMSS"/>
+                            <field included="Y" fieldName="SMXPWWS"/>
+                            <field included="Y" fieldName="SMXCREL"/>
+                            <field included="Y" fieldName="SMXSOS"/>
+                            <field included="Y" fieldName="FILL_17"/>
+                            <field included="Y" fieldName="SMXTSOS"/>
+                            <field included="Y" fieldName="SMXCSUBP"/>
+                            <field included="Y" fieldName="SMXFSTG"/>
+                            <field included="Y" fieldName="SMXHWMFSTG"/>
+                            <field included="Y" fieldName="SMXLWMFSTG"/>
+                            <field included="Y" fieldName="SMXLFA"/>
+                            <field included="Y" fieldName="SMXSV"/>
+                            <field included="Y" fieldName="SMXEXTS"/>
+                            <field included="Y" fieldName="SMXEXTSA"/>
+                            <field included="Y" fieldName="SMXEXTSR"/>
+                            <field included="Y" fieldName="FILL_18"/>
+                            <field included="Y" fieldName="FILL_19"/>
+                            <field included="Y" fieldName="FILL_20"/>
+                        </field>
+                    </interfaceField>
+                </segment>
+            </interface>
+        </serviceInterface>
+        <version>0</version>
+    </serviceOutputInterface>
+    <applicationDataStructureType>Block</applicationDataStructureType>
+    <messageVisitorRuntimeType>CICS_COMMAREA</messageVisitorRuntimeType>
+    <ccsid>IBM037</ccsid>
+    <totalExecCount>0</totalExecCount>
+    <failedCount>0</failedCount>
+    <trancodeOverride>CICEXSMS</trancodeOverride>
+    <trimOutputLeadingWhitespace>false</trimOutputLeadingWhitespace>
+    <trimOutputTrailingWhitespace>true</trimOutputTrailingWhitespace>
+    <escapeOutputControlCharacters>false</escapeOutputControlCharacters>
+    <initializeInputFields>false</initializeInputFields>
+    <omitOutputFieldsByValue>false</omitOutputFieldsByValue>
+    <omitOutputFieldsByValueByte>0x00</omitOutputFieldsByValueByte>
+    <omitOutputEmptyTags>false</omitOutputEmptyTags>
+    <enforceMinArrayOccurrence>false</enforceMinArrayOccurrence>
+    <enforceMinArrayOccurrenceResponse>false</enforceMinArrayOccurrenceResponse>
+    <ldsStartsWithLLZZTRANCODE>false</ldsStartsWithLLZZTRANCODE>
+    <ldsStartsWithLLZZ>false</ldsStartsWithLLZZ>
+    <truncateInputLastCharField>false</truncateInputLastCharField>
+</service>

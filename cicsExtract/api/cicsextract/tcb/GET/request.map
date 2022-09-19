@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping"
+	domainID="com.ibm.msl.mapping.xml"
+	domainIDExtension="zosconnect"
+	targetNamespace="http://www.ibm.com/zosConnect/2.0/mapping/GET"
+	version="8.0.5.0"
+	xmlns:map="http://www.ibm.com/zosConnect/2.0/mapping/GET"
+	jsonWrapped="true"
+	
+	jsonWrapperName="cicsExtrTCB"
+	 
+	>
+
+	<inlinedXMLSchema targetNamespace="http://www.ibm.com/zosConnect/2.0/mapping/JSON/output/GET"><![CDATA[
+
+	<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.ibm.com/zosConnect/2.0/mapping/JSON/output/GET" xmlns:tns="http://www.ibm.com/zosConnect/2.0/mapping/JSON/output/GET">
+  <xsd:element name="cicsExtrTCB" type="tns:cicsExtrTCB"/>
+  <xsd:complexType name="cicsExtrTCB">
+    <xsd:sequence/>
+  </xsd:complexType>
+</xsd:schema>
+
+	]]></inlinedXMLSchema>
+
+	<inlinedXMLSchema targetNamespace="http://www.ibm.com/zosConnect/2.0/mapping/HTTP/input/GET"><![CDATA[
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      targetNamespace="http://www.ibm.com/zosConnect/2.0/mapping/HTTP/input/GET"
+      xmlns:body="http://www.ibm.com/zosConnect/2.0/mapping/JSON/output/GET"
+      xmlns:tns="http://www.ibm.com/zosConnect/2.0/mapping/HTTP/input/GET">
+
+      <xsd:import namespace="http://www.ibm.com/zosConnect/2.0/mapping/JSON/output/GET" schemaLocation="../schema_0.xsd"/>
+
+      <xsd:element name="HTTPRequest" type="tns:HTTPRequestType"/>
+
+      <xsd:complexType name="HTTPRequestType">
+        <xsd:sequence>
+          <xsd:element name="Headers" type="tns:HeadersType"/>
+          <xsd:element name="PathParameters" type="tns:PathParametersType"/>
+          <xsd:element name="QueryParameters" type="tns:QueryParametersType"/>
+          <xsd:element name="Body" type="tns:BodyType"/>
+        </xsd:sequence>
+      </xsd:complexType>
+
+      <xsd:complexType name="HeadersType">
+        <xsd:sequence>
+        	<xsd:element maxOccurs="1" minOccurs="0" name="Authorization" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+
+      <xsd:complexType name="PathParametersType">
+        <xsd:sequence>
+        </xsd:sequence>
+      </xsd:complexType>
+
+      <xsd:complexType name="QueryParametersType">
+        <xsd:sequence>
+        </xsd:sequence>
+      </xsd:complexType>
+
+      <xsd:complexType name="BodyType">
+        <xsd:sequence>
+          <xsd:element ref="body:cicsExtrTCB"/>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+
+	]]></inlinedXMLSchema>
+
+    <input inlinedXMLSchema="true" path="../schema_1.xsd" targetNamespace="http://www.ibm.com/zosConnect/2.0/mapping/HTTP/input/GET" var="rootInput"/>
+    <output inlinedXMLSchema="true" path="../schema_0.xsd" targetNamespace="http://www.ibm.com/zosConnect/2.0/mapping/JSON/output/GET" var="rootOutput"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="in" uri="http://www.ibm.com/zosConnect/2.0/mapping/HTTP/input/GET"/>
+        <namespace kind="supplement" prefix="out" uri="http://www.ibm.com/zosConnect/2.0/mapping/JSON/output/GET"/>
+    </namespaces>
+    <mappingDeclaration name="GET.cicsextract.tcb">
+        <input namespace="http://www.ibm.com/zosConnect/2.0/mapping/HTTP/input/GET" path="$rootInput/HTTPRequest"/>
+        <output namespace="http://www.ibm.com/zosConnect/2.0/mapping/JSON/output/GET" path="$rootOutput/cicsExtrTCB"/>
+        <passthrough>
+            <input path="Body/cicsExtrTCB"/>
+            <output path="."/>
+            <updates>
+            </updates>
+        </passthrough>
+    </mappingDeclaration>
+
+</mappingRoot>

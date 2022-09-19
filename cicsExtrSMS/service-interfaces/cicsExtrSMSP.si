@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:message xmlns:ns2="http://www.ibm.com/ims/Transaction" transactionCode="" messageName="cicsExtrSMSP" direction="0" serviceType="CICS_COMM_AREA">
+    <message id="1" name="cicsExtrSMSP">
+        <segment id="1" name="COMMAREA" originalName="COMMAREA">
+            <field name="DFHSMXDS" originalName="DFHSMXDS" included="Y" path="DFHSMXDS">
+                <startPos>1</startPos>
+                <bytes>1896</bytes>
+                <maxBytes>0</maxBytes>
+                <marshaller alignment="NATURAL"/>
+                <applicationDatatype datatype="STRUCT"/>
+                <field name="SMXLEN" originalName="SMXLEN" included="Y" path="DFHSMXDS.SMXLEN">
+                    <startPos>1</startPos>
+                    <bytes>2</bytes>
+                    <maxBytes>2</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="SHORT" precision="4"/>
+                </field>
+                <field name="SMXID" originalName="SMXID" included="Y" path="DFHSMXDS.SMXID">
+                    <startPos>3</startPos>
+                    <bytes>2</bytes>
+                    <maxBytes>2</maxBytes>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+                <field name="SMXDVERS" originalName="SMXDVERS" included="Y" path="DFHSMXDS.SMXDVERS">
+                    <startPos>5</startPos>
+                    <bytes>1</bytes>
+                    <maxBytes>1</maxBytes>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+                <field name="FILL_0" originalName="FILL_0" included="Y" path="DFHSMXDS.FILL_0">
+                    <startPos>6</startPos>
+                    <bytes>3</bytes>
+                    <maxBytes>3</maxBytes>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+                <field name="SMXGBLLEN" originalName="SMXGBLLEN" included="Y" path="DFHSMXDS.SMXGBLLEN">
+                    <startPos>9</startPos>
+                    <bytes>2</bytes>
+                    <maxBytes>2</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="SHORT" precision="4"/>
+                </field>
+                <field name="SMXNPAGP" originalName="SMXNPAGP" included="N" path="DFHSMXDS.SMXNPAGP" dependedOn="true">
+                    <startPos>11</startPos>
+                    <bytes>2</bytes>
+                    <maxBytes>2</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="SHORT" precision="4"/>
+                </field>
+                <field name="SMXSTGPROT" originalName="SMXSTGPROT" included="Y" path="DFHSMXDS.SMXSTGPROT">
+                    <startPos>13</startPos>
+                    <bytes>1</bytes>
+                    <maxBytes>1</maxBytes>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+                <field name="SMXRENTPGM" originalName="SMXRENTPGM" included="Y" path="DFHSMXDS.SMXRENTPGM">
+                    <startPos>14</startPos>
+                    <bytes>1</bytes>
+                    <maxBytes>1</maxBytes>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+                <field name="SMXTRANISO" originalName="SMXTRANISO" included="Y" path="DFHSMXDS.SMXTRANISO">
+                    <startPos>15</startPos>
+                    <bytes>1</bytes>
+                    <maxBytes>1</maxBytes>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+                <field name="SMXMEMLIMITSRC" originalName="SMXMEMLIMITSRC" included="Y" path="DFHSMXDS.SMXMEMLIMITSRC">
+                    <startPos>16</startPos>
+                    <bytes>1</bytes>
+                    <maxBytes>1</maxBytes>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+                <field name="SMXUSSCUR" originalName="SMXUSSCUR" included="Y" path="DFHSMXDS.SMXUSSCUR">
+                    <startPos>17</startPos>
+                    <bytes>4</bytes>
+                    <maxBytes>4</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="INT" precision="8"/>
+                </field>
+                <field name="SMXUSSCUM" originalName="SMXUSSCUM" included="Y" path="DFHSMXDS.SMXUSSCUM">
+                    <startPos>21</startPos>
+                    <bytes>4</bytes>
+                    <maxBytes>4</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="INT" precision="8"/>
+                </field>
+                <field name="SMXUSSHWM" originalName="SMXUSSHWM" included="Y" path="DFHSMXDS.SMXUSSHWM">
+                    <startPos>25</startPos>
+                    <bytes>4</bytes>
+                    <maxBytes>4</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="INT" precision="8"/>
+                </field>
+                <field name="SMXCSSCUR" originalName="SMXCSSCUR" included="Y" path="DFHSMXDS.SMXCSSCUR">
+                    <startPos>29</startPos>
+                    <bytes>4</bytes>
+                    <maxBytes>4</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="INT" precision="8"/>
+                </field>
+                <field name="SMXCSSCUM" originalName="SMXCSSCUM" included="Y" path="DFHSMXDS.SMXCSSCUM">
+                    <startPos>33</startPos>
+                    <bytes>4</bytes>
+                    <maxBytes>4</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="INT" precision="8"/>
+                </field>
+                <field name="SMXCSSHWM" originalName="SMXCSSHWM" included="Y" path="DFHSMXDS.SMXCSSHWM">
+                    <startPos>37</startPos>
+                    <bytes>4</bytes>
+                    <maxBytes>4</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="INT" precision="8"/>
+                </field>
+                <field name="SMXDSALIMIT" originalName="SMXDSALIMIT" included="Y" path="DFHSMXDS.SMXDSALIMIT">
+                    <startPos>41</startPos>
+                    <bytes>4</bytes>
+                    <maxBytes>4</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="INT" precision="8"/>
+                </field>
+                <field name="SMXEDSALIMIT" originalName="SMXEDSALIMIT" included="Y" path="DFHSMXDS.SMXEDSALIMIT">
+                    <startPos>45</startPos>
+                    <bytes>4</bytes>
+                    <maxBytes>4</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="INT" precision="8"/>
+                </field>
+                <field name="SMXDSATOTAL" originalName="SMXDSATOTAL" included="Y" path="DFHSMXDS.SMXDSATOTAL">
+                    <startPos>49</startPos>
+                    <bytes>4</bytes>
+                    <maxBytes>4</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="INT" precision="8"/>
+                </field>
+                <field name="SMXEDSATOTAL" originalName="SMXEDSATOTAL" included="Y" path="DFHSMXDS.SMXEDSATOTAL">
+                    <startPos>53</startPos>
+                    <bytes>4</bytes>
+                    <maxBytes>4</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="INT" precision="8"/>
+                </field>
+                <field name="SMXHWMDSATOTAL" originalName="SMXHWMDSATOTAL" included="Y" path="DFHSMXDS.SMXHWMDSATOTAL">
+                    <startPos>57</startPos>
+                    <bytes>4</bytes>
+                    <maxBytes>4</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="INT" precision="8"/>
+                </field>
+                <field name="SMXHWMEDSATOTAL" originalName="SMXHWMEDSATOTAL" included="Y" path="DFHSMXDS.SMXHWMEDSATOTAL">
+                    <startPos>61</startPos>
+                    <bytes>4</bytes>
+                    <maxBytes>4</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="INT" precision="8"/>
+                </field>
+                <field name="SMXTIMEWAITMVS" originalName="SMXTIMEWAITMVS" included="Y" path="DFHSMXDS.SMXTIMEWAITMVS">
+                    <startPos>65</startPos>
+                    <bytes>8</bytes>
+                    <maxBytes>8</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="LONG" precision="16"/>
+                </field>
+                <field name="SMXMVSSTGREQWAITS" originalName="SMXMVSSTGREQWAITS" included="Y" path="DFHSMXDS.SMXMVSSTGREQWAITS">
+                    <startPos>73</startPos>
+                    <bytes>4</bytes>
+                    <maxBytes>4</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="INT" precision="8"/>
+                </field>
+                <field name="FILL_1" originalName="FILL_1" included="Y" path="DFHSMXDS.FILL_1">
+                    <startPos>77</startPos>
+                    <bytes>4</bytes>
+                    <maxBytes>4</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="INT" precision="8"/>
+                </field>
+                <field name="FILL_2" originalName="FILL_2" included="Y" path="DFHSMXDS.FILL_2">
+                    <startPos>81</startPos>
+                    <bytes>4</bytes>
+                    <maxBytes>4</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="INT" precision="8"/>
+                </field>
+                <field name="FILL_3" originalName="FILL_3" included="Y" path="DFHSMXDS.FILL_3">
+                    <startPos>85</startPos>
+                    <bytes>4</bytes>
+                    <maxBytes>4</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="INT" precision="8"/>
+                </field>
+                <field name="SMX_MEMLIMIT" originalName="SMX_MEMLIMIT" included="Y" path="DFHSMXDS.SMX_MEMLIMIT">
+                    <startPos>89</startPos>
+                    <bytes>8</bytes>
+                    <maxBytes>8</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="ULONG" precision="18"/>
+                </field>
+                <field name="SMX_GETSTOR_SIZE" originalName="SMX_GETSTOR_SIZE" included="Y" path="DFHSMXDS.SMX_GETSTOR_SIZE">
+                    <startPos>97</startPos>
+                    <bytes>8</bytes>
+                    <maxBytes>8</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="ULONG" precision="18"/>
+                </field>
+                <field name="SMX_AS_ACTIVE" originalName="SMX_AS_ACTIVE" included="Y" path="DFHSMXDS.SMX_AS_ACTIVE">
+                    <startPos>105</startPos>
+                    <bytes>8</bytes>
+                    <maxBytes>8</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="ULONG" precision="18"/>
+                </field>
+                <field name="SMX_HWM_AS_ACTIVE" originalName="SMX_HWM_AS_ACTIVE" included="Y" path="DFHSMXDS.SMX_HWM_AS_ACTIVE">
+                    <startPos>113</startPos>
+                    <bytes>8</bytes>
+                    <maxBytes>8</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="ULONG" precision="18"/>
+                </field>
+                <field name="SMX_GDSA_ACTIVE" originalName="SMX_GDSA_ACTIVE" included="Y" path="DFHSMXDS.SMX_GDSA_ACTIVE">
+                    <startPos>121</startPos>
+                    <bytes>8</bytes>
+                    <maxBytes>8</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="ULONG" precision="18"/>
+                </field>
+                <field name="SMX_HWM_GDSA_ACTIVE" originalName="SMX_HWM_GDSA_ACTIVE" included="Y" path="DFHSMXDS.SMX_HWM_GDSA_ACTIVE">
+                    <startPos>129</startPos>
+                    <bytes>8</bytes>
+                    <maxBytes>8</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="ULONG" precision="18"/>
+                </field>
+                <field name="SMX_GDSA_ALLOCATED" originalName="SMX_GDSA_ALLOCATED" included="Y" path="DFHSMXDS.SMX_GDSA_ALLOCATED">
+                    <startPos>137</startPos>
+                    <bytes>8</bytes>
+                    <maxBytes>8</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="ULONG" precision="18"/>
+                </field>
+                <field name="SMX_HWM_GDSA_ALLOCATED" originalName="SMX_HWM_GDSA_ALLOCATED" included="Y" path="DFHSMXDS.SMX_HWM_GDSA_ALLOCATED">
+                    <startPos>145</startPos>
+                    <bytes>8</bytes>
+                    <maxBytes>8</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="ULONG" precision="18"/>
+                </field>
+                <field name="FILL_4" originalName="FILL_4" included="Y" path="DFHSMXDS.FILL_4">
+                    <startPos>153</startPos>
+                    <bytes>4</bytes>
+                    <maxBytes>4</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="INT" precision="8"/>
+                </field>
+                <field name="FILL_5" originalName="FILL_5" included="Y" path="DFHSMXDS.FILL_5">
+                    <startPos>157</startPos>
+                    <bytes>4</bytes>
+                    <maxBytes>4</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="INT" precision="8"/>
+                </field>
+                <field name="FILL_6" originalName="FILL_6" included="Y" path="DFHSMXDS.FILL_6">
+                    <startPos>161</startPos>
+                    <bytes>8</bytes>
+                    <maxBytes>8</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="ULONG" precision="18"/>
+                </field>
+                <field name="FILL_7" originalName="FILL_7" included="Y" path="DFHSMXDS.FILL_7">
+                    <startPos>169</startPos>
+                    <bytes>8</bytes>
+                    <maxBytes>8</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="ULONG" precision="18"/>
+                </field>
+                <field name="FILL_8" originalName="FILL_8" included="Y" path="DFHSMXDS.FILL_8">
+                    <startPos>177</startPos>
+                    <bytes>8</bytes>
+                    <maxBytes>8</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="ULONG" precision="18"/>
+                </field>
+                <field name="SMXLVABYTES" originalName="SMXLVABYTES" included="Y" path="DFHSMXDS.SMXLVABYTES">
+                    <startPos>185</startPos>
+                    <bytes>8</bytes>
+                    <maxBytes>8</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="ULONG" precision="18"/>
+                </field>
+                <field name="SMXLVHBYTES" originalName="SMXLVHBYTES" included="Y" path="DFHSMXDS.SMXLVHBYTES">
+                    <startPos>193</startPos>
+                    <bytes>8</bytes>
+                    <maxBytes>8</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="ULONG" precision="18"/>
+                </field>
+                <field name="SMXLVGBYTES" originalName="SMXLVGBYTES" included="Y" path="DFHSMXDS.SMXLVGBYTES">
+                    <startPos>201</startPos>
+                    <bytes>8</bytes>
+                    <maxBytes>8</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="ULONG" precision="18"/>
+                </field>
+                <field name="SMXLVNMEMOBJ" originalName="SMXLVNMEMOBJ" included="Y" path="DFHSMXDS.SMXLVNMEMOBJ">
+                    <startPos>209</startPos>
+                    <bytes>8</bytes>
+                    <maxBytes>8</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="ULONG" precision="18"/>
+                </field>
+                <field name="FILL_9" originalName="FILL_9" included="Y" path="DFHSMXDS.FILL_9">
+                    <startPos>217</startPos>
+                    <bytes>8</bytes>
+                    <maxBytes>8</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="ULONG" precision="18"/>
+                </field>
+                <field name="SMXFROMGUARDFAIL" originalName="SMXFROMGUARDFAIL" included="Y" path="DFHSMXDS.SMXFROMGUARDFAIL">
+                    <startPos>225</startPos>
+                    <bytes>8</bytes>
+                    <maxBytes>8</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="ULONG" precision="18"/>
+                </field>
+                <field name="SMXFROMGUARDFAILSIZE" originalName="SMXFROMGUARDFAILSIZE" included="Y" path="DFHSMXDS.SMXFROMGUARDFAILSIZE">
+                    <startPos>233</startPos>
+                    <bytes>8</bytes>
+                    <maxBytes>8</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="ULONG" precision="18"/>
+                </field>
+                <field name="FILL_10" originalName="FILL_10" included="Y" path="DFHSMXDS.FILL_10">
+                    <startPos>241</startPos>
+                    <bytes>8</bytes>
+                    <maxBytes>8</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="ULONG" precision="18"/>
+                </field>
+                <field name="SMXLVSHRBYTES" originalName="SMXLVSHRBYTES" included="Y" path="DFHSMXDS.SMXLVSHRBYTES">
+                    <startPos>249</startPos>
+                    <bytes>8</bytes>
+                    <maxBytes>8</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="ULONG" precision="18"/>
+                </field>
+                <field name="SMXLVSHRGBYTES" originalName="SMXLVSHRGBYTES" included="Y" path="DFHSMXDS.SMXLVSHRGBYTES">
+                    <startPos>257</startPos>
+                    <bytes>8</bytes>
+                    <maxBytes>8</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="ULONG" precision="18"/>
+                </field>
+                <field name="SMXLVSHRNMEMOBJ" originalName="SMXLVSHRNMEMOBJ" included="Y" path="DFHSMXDS.SMXLVSHRNMEMOBJ">
+                    <startPos>265</startPos>
+                    <bytes>8</bytes>
+                    <maxBytes>8</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="ULONG" precision="18"/>
+                </field>
+                <field name="FILL_11" originalName="FILL_11" included="Y" path="DFHSMXDS.FILL_11">
+                    <startPos>273</startPos>
+                    <bytes>8</bytes>
+                    <maxBytes>8</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="ULONG" precision="18"/>
+                </field>
+                <field name="SMXHVAUXSLOTS" originalName="SMXHVAUXSLOTS" included="Y" path="DFHSMXDS.SMXHVAUXSLOTS">
+                    <startPos>281</startPos>
+                    <bytes>8</bytes>
+                    <maxBytes>8</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="ULONG" precision="18"/>
+                </field>
+                <field name="SMXHVGAUXSLOTS" originalName="SMXHVGAUXSLOTS" included="Y" path="DFHSMXDS.SMXHVGAUXSLOTS">
+                    <startPos>289</startPos>
+                    <bytes>8</bytes>
+                    <maxBytes>8</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="ULONG" precision="18"/>
+                </field>
+                <field name="SMXHVPAGESINREAL" originalName="SMXHVPAGESINREAL" included="Y" path="DFHSMXDS.SMXHVPAGESINREAL">
+                    <startPos>297</startPos>
+                    <bytes>8</bytes>
+                    <maxBytes>8</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="ULONG" precision="18"/>
+                </field>
+                <field name="SMXHVGPAGESINREAL" originalName="SMXHVGPAGESINREAL" included="Y" path="DFHSMXDS.SMXHVGPAGESINREAL">
+                    <startPos>305</startPos>
+                    <bytes>8</bytes>
+                    <maxBytes>8</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="ULONG" precision="18"/>
+                </field>
+                <field name="SMXLARGEMEMOBJ" originalName="SMXLARGEMEMOBJ" included="Y" path="DFHSMXDS.SMXLARGEMEMOBJ">
+                    <startPos>313</startPos>
+                    <bytes>8</bytes>
+                    <maxBytes>8</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="ULONG" precision="18"/>
+                </field>
+                <field name="SMXLARGEPAGESINREAL" originalName="SMXLARGEPAGESINREAL" included="Y" path="DFHSMXDS.SMXLARGEPAGESINREAL">
+                    <startPos>321</startPos>
+                    <bytes>8</bytes>
+                    <maxBytes>8</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="ULONG" precision="18"/>
+                </field>
+                <field name="FILL_12" originalName="FILL_12" included="Y" path="DFHSMXDS.FILL_12">
+                    <startPos>329</startPos>
+                    <bytes>8</bytes>
+                    <maxBytes>8</maxBytes>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+                <field name="FILL_13" originalName="FILL_13" included="Y" path="DFHSMXDS.FILL_13">
+                    <startPos>337</startPos>
+                    <bytes>8</bytes>
+                    <maxBytes>8</maxBytes>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+                <field name="FILL_14" originalName="FILL_14" included="Y" path="DFHSMXDS.FILL_14">
+                    <startPos>345</startPos>
+                    <bytes>8</bytes>
+                    <maxBytes>8</maxBytes>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+                <field name="FILL_15" originalName="FILL_15" included="Y" path="DFHSMXDS.FILL_15">
+                    <startPos>353</startPos>
+                    <bytes>8</bytes>
+                    <maxBytes>8</maxBytes>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+                <field name="SMXBODY" originalName="SMXBODY" included="Y" path="DFHSMXDS.SMXBODY" dependsOn="SMXNPAGP" dependsOnPath="DFHSMXDS.SMXNPAGP" minOccurs="1" maxOccurs="12">
+                    <startPos>361</startPos>
+                    <bytes>1536</bytes>
+                    <maxBytes>0</maxBytes>
+                    <marshaller alignment="NATURAL"/>
+                    <applicationDatatype datatype="ARRAY"/>
+                    <field name="SMXDSANAME" originalName="SMXDSANAME" included="Y" path="DFHSMXDS.SMXBODY.SMXDSANAME">
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="SMXLOCN" originalName="SMXLOCN" included="Y" path="DFHSMXDS.SMXBODY.SMXLOCN">
+                        <bytes>1</bytes>
+                        <maxBytes>1</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="SMXACCESS" originalName="SMXACCESS" included="Y" path="DFHSMXDS.SMXBODY.SMXACCESS">
+                        <bytes>1</bytes>
+                        <maxBytes>1</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="SMXDSAINDEX" originalName="SMXDSAINDEX" included="Y" path="DFHSMXDS.SMXBODY.SMXDSAINDEX">
+                        <bytes>1</bytes>
+                        <maxBytes>1</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="FILL_16" originalName="FILL_16" included="Y" path="DFHSMXDS.SMXBODY.FILL_16">
+                        <bytes>1</bytes>
+                        <maxBytes>1</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="SMXDSASZ" originalName="SMXDSASZ" included="Y" path="DFHSMXDS.SMXBODY.SMXDSASZ">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="SMXHWMDSASZ" originalName="SMXHWMDSASZ" included="Y" path="DFHSMXDS.SMXBODY.SMXHWMDSASZ">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="SMXCSIZE" originalName="SMXCSIZE" included="Y" path="DFHSMXDS.SMXBODY.SMXCSIZE">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="SMXGMREQ" originalName="SMXGMREQ" included="Y" path="DFHSMXDS.SMXBODY.SMXGMREQ">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="SMXFMREQ" originalName="SMXFMREQ" included="Y" path="DFHSMXDS.SMXBODY.SMXFMREQ">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="SMXASR" originalName="SMXASR" included="Y" path="DFHSMXDS.SMXBODY.SMXASR">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="SMXDSR" originalName="SMXDSR" included="Y" path="DFHSMXDS.SMXBODY.SMXDSR">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="SMXCRISS" originalName="SMXCRISS" included="Y" path="DFHSMXDS.SMXBODY.SMXCRISS">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="SMXUCSS" originalName="SMXUCSS" included="Y" path="DFHSMXDS.SMXBODY.SMXUCSS">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="SMXCSS" originalName="SMXCSS" included="Y" path="DFHSMXDS.SMXBODY.SMXCSS">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="SMXHWMSS" originalName="SMXHWMSS" included="Y" path="DFHSMXDS.SMXBODY.SMXHWMSS">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="SMXPWWS" originalName="SMXPWWS" included="Y" path="DFHSMXDS.SMXBODY.SMXPWWS">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="SMXCREL" originalName="SMXCREL" included="Y" path="DFHSMXDS.SMXBODY.SMXCREL">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="SMXSOS" originalName="SMXSOS" included="Y" path="DFHSMXDS.SMXBODY.SMXSOS">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="FILL_17" originalName="FILL_17" included="Y" path="DFHSMXDS.SMXBODY.FILL_17">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="SMXTSOS" originalName="SMXTSOS" included="Y" path="DFHSMXDS.SMXBODY.SMXTSOS">
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="LONG" precision="16"/>
+                    </field>
+                    <field name="SMXCSUBP" originalName="SMXCSUBP" included="Y" path="DFHSMXDS.SMXBODY.SMXCSUBP">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="SMXFSTG" originalName="SMXFSTG" included="Y" path="DFHSMXDS.SMXBODY.SMXFSTG">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="SMXHWMFSTG" originalName="SMXHWMFSTG" included="Y" path="DFHSMXDS.SMXBODY.SMXHWMFSTG">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="SMXLWMFSTG" originalName="SMXLWMFSTG" included="Y" path="DFHSMXDS.SMXBODY.SMXLWMFSTG">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="SMXLFA" originalName="SMXLFA" included="Y" path="DFHSMXDS.SMXBODY.SMXLFA">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="SMXSV" originalName="SMXSV" included="Y" path="DFHSMXDS.SMXBODY.SMXSV">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="SMXEXTS" originalName="SMXEXTS" included="Y" path="DFHSMXDS.SMXBODY.SMXEXTS">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="SMXEXTSA" originalName="SMXEXTSA" included="Y" path="DFHSMXDS.SMXBODY.SMXEXTSA">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="SMXEXTSR" originalName="SMXEXTSR" included="Y" path="DFHSMXDS.SMXBODY.SMXEXTSR">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="FILL_18" originalName="FILL_18" included="Y" path="DFHSMXDS.SMXBODY.FILL_18">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="FILL_19" originalName="FILL_19" included="Y" path="DFHSMXDS.SMXBODY.FILL_19">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="FILL_20" originalName="FILL_20" included="Y" path="DFHSMXDS.SMXBODY.FILL_20">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                </field>
+            </field>
+        </segment>
+    </message>
+</ns2:message>

@@ -1,0 +1,474 @@
+{
+  "type" : "object",
+  "properties" : {
+    "DFHSMXDS" : {
+      "type" : "object",
+      "properties" : {
+        "SMXLEN" : {
+          "minimum" : -9999,
+          "maximum" : 9999,
+          "type" : "integer"
+        },
+        "SMXID" : {
+          "maxLength" : 2,
+          "type" : "string"
+        },
+        "SMXDVERS" : {
+          "maxLength" : 1,
+          "type" : "string"
+        },
+        "FILL_0" : {
+          "maxLength" : 3,
+          "type" : "string"
+        },
+        "SMXGBLLEN" : {
+          "minimum" : -9999,
+          "maximum" : 9999,
+          "type" : "integer"
+        },
+        "SMXSTGPROT" : {
+          "maxLength" : 1,
+          "type" : "string"
+        },
+        "SMXRENTPGM" : {
+          "maxLength" : 1,
+          "type" : "string"
+        },
+        "SMXTRANISO" : {
+          "maxLength" : 1,
+          "type" : "string"
+        },
+        "SMXMEMLIMITSRC" : {
+          "maxLength" : 1,
+          "type" : "string"
+        },
+        "SMXUSSCUR" : {
+          "minimum" : -99999999,
+          "maximum" : 99999999,
+          "type" : "integer"
+        },
+        "SMXUSSCUM" : {
+          "minimum" : -99999999,
+          "maximum" : 99999999,
+          "type" : "integer"
+        },
+        "SMXUSSHWM" : {
+          "minimum" : -99999999,
+          "maximum" : 99999999,
+          "type" : "integer"
+        },
+        "SMXCSSCUR" : {
+          "minimum" : -99999999,
+          "maximum" : 99999999,
+          "type" : "integer"
+        },
+        "SMXCSSCUM" : {
+          "minimum" : -99999999,
+          "maximum" : 99999999,
+          "type" : "integer"
+        },
+        "SMXCSSHWM" : {
+          "minimum" : -99999999,
+          "maximum" : 99999999,
+          "type" : "integer"
+        },
+        "SMXDSALIMIT" : {
+          "minimum" : -99999999,
+          "maximum" : 99999999,
+          "type" : "integer"
+        },
+        "SMXEDSALIMIT" : {
+          "minimum" : -99999999,
+          "maximum" : 99999999,
+          "type" : "integer"
+        },
+        "SMXDSATOTAL" : {
+          "minimum" : -99999999,
+          "maximum" : 99999999,
+          "type" : "integer"
+        },
+        "SMXEDSATOTAL" : {
+          "minimum" : -99999999,
+          "maximum" : 99999999,
+          "type" : "integer"
+        },
+        "SMXHWMDSATOTAL" : {
+          "minimum" : -99999999,
+          "maximum" : 99999999,
+          "type" : "integer"
+        },
+        "SMXHWMEDSATOTAL" : {
+          "minimum" : -99999999,
+          "maximum" : 99999999,
+          "type" : "integer"
+        },
+        "SMXTIMEWAITMVS" : {
+          "minimum" : -9999999999999999,
+          "maximum" : 9999999999999999,
+          "type" : "integer"
+        },
+        "SMXMVSSTGREQWAITS" : {
+          "minimum" : -99999999,
+          "maximum" : 99999999,
+          "type" : "integer"
+        },
+        "FILL_1" : {
+          "minimum" : -99999999,
+          "maximum" : 99999999,
+          "type" : "integer"
+        },
+        "FILL_2" : {
+          "minimum" : -99999999,
+          "maximum" : 99999999,
+          "type" : "integer"
+        },
+        "FILL_3" : {
+          "minimum" : -99999999,
+          "maximum" : 99999999,
+          "type" : "integer"
+        },
+        "SMX_MEMLIMIT" : {
+          "minimum" : 0,
+          "maximum" : 999999999999999999,
+          "type" : "integer"
+        },
+        "SMX_GETSTOR_SIZE" : {
+          "minimum" : 0,
+          "maximum" : 999999999999999999,
+          "type" : "integer"
+        },
+        "SMX_AS_ACTIVE" : {
+          "minimum" : 0,
+          "maximum" : 999999999999999999,
+          "type" : "integer"
+        },
+        "SMX_HWM_AS_ACTIVE" : {
+          "minimum" : 0,
+          "maximum" : 999999999999999999,
+          "type" : "integer"
+        },
+        "SMX_GDSA_ACTIVE" : {
+          "minimum" : 0,
+          "maximum" : 999999999999999999,
+          "type" : "integer"
+        },
+        "SMX_HWM_GDSA_ACTIVE" : {
+          "minimum" : 0,
+          "maximum" : 999999999999999999,
+          "type" : "integer"
+        },
+        "SMX_GDSA_ALLOCATED" : {
+          "minimum" : 0,
+          "maximum" : 999999999999999999,
+          "type" : "integer"
+        },
+        "SMX_HWM_GDSA_ALLOCATED" : {
+          "minimum" : 0,
+          "maximum" : 999999999999999999,
+          "type" : "integer"
+        },
+        "FILL_4" : {
+          "minimum" : -99999999,
+          "maximum" : 99999999,
+          "type" : "integer"
+        },
+        "FILL_5" : {
+          "minimum" : -99999999,
+          "maximum" : 99999999,
+          "type" : "integer"
+        },
+        "FILL_6" : {
+          "minimum" : 0,
+          "maximum" : 999999999999999999,
+          "type" : "integer"
+        },
+        "FILL_7" : {
+          "minimum" : 0,
+          "maximum" : 999999999999999999,
+          "type" : "integer"
+        },
+        "FILL_8" : {
+          "minimum" : 0,
+          "maximum" : 999999999999999999,
+          "type" : "integer"
+        },
+        "SMXLVABYTES" : {
+          "minimum" : 0,
+          "maximum" : 999999999999999999,
+          "type" : "integer"
+        },
+        "SMXLVHBYTES" : {
+          "minimum" : 0,
+          "maximum" : 999999999999999999,
+          "type" : "integer"
+        },
+        "SMXLVGBYTES" : {
+          "minimum" : 0,
+          "maximum" : 999999999999999999,
+          "type" : "integer"
+        },
+        "SMXLVNMEMOBJ" : {
+          "minimum" : 0,
+          "maximum" : 999999999999999999,
+          "type" : "integer"
+        },
+        "FILL_9" : {
+          "minimum" : 0,
+          "maximum" : 999999999999999999,
+          "type" : "integer"
+        },
+        "SMXFROMGUARDFAIL" : {
+          "minimum" : 0,
+          "maximum" : 999999999999999999,
+          "type" : "integer"
+        },
+        "SMXFROMGUARDFAILSIZE" : {
+          "minimum" : 0,
+          "maximum" : 999999999999999999,
+          "type" : "integer"
+        },
+        "FILL_10" : {
+          "minimum" : 0,
+          "maximum" : 999999999999999999,
+          "type" : "integer"
+        },
+        "SMXLVSHRBYTES" : {
+          "minimum" : 0,
+          "maximum" : 999999999999999999,
+          "type" : "integer"
+        },
+        "SMXLVSHRGBYTES" : {
+          "minimum" : 0,
+          "maximum" : 999999999999999999,
+          "type" : "integer"
+        },
+        "SMXLVSHRNMEMOBJ" : {
+          "minimum" : 0,
+          "maximum" : 999999999999999999,
+          "type" : "integer"
+        },
+        "FILL_11" : {
+          "minimum" : 0,
+          "maximum" : 999999999999999999,
+          "type" : "integer"
+        },
+        "SMXHVAUXSLOTS" : {
+          "minimum" : 0,
+          "maximum" : 999999999999999999,
+          "type" : "integer"
+        },
+        "SMXHVGAUXSLOTS" : {
+          "minimum" : 0,
+          "maximum" : 999999999999999999,
+          "type" : "integer"
+        },
+        "SMXHVPAGESINREAL" : {
+          "minimum" : 0,
+          "maximum" : 999999999999999999,
+          "type" : "integer"
+        },
+        "SMXHVGPAGESINREAL" : {
+          "minimum" : 0,
+          "maximum" : 999999999999999999,
+          "type" : "integer"
+        },
+        "SMXLARGEMEMOBJ" : {
+          "minimum" : 0,
+          "maximum" : 999999999999999999,
+          "type" : "integer"
+        },
+        "SMXLARGEPAGESINREAL" : {
+          "minimum" : 0,
+          "maximum" : 999999999999999999,
+          "type" : "integer"
+        },
+        "FILL_12" : {
+          "maxLength" : 8,
+          "type" : "string"
+        },
+        "FILL_13" : {
+          "maxLength" : 8,
+          "type" : "string"
+        },
+        "FILL_14" : {
+          "maxLength" : 8,
+          "type" : "string"
+        },
+        "FILL_15" : {
+          "maxLength" : 8,
+          "type" : "string"
+        },
+        "SMXBODY" : {
+          "type" : "array",
+          "maxItems" : 12,
+          "minItems" : 1,
+          "items" : {
+            "type" : "object",
+            "properties" : {
+              "SMXDSANAME" : {
+                "maxLength" : 8,
+                "type" : "string"
+              },
+              "SMXLOCN" : {
+                "maxLength" : 1,
+                "type" : "string"
+              },
+              "SMXACCESS" : {
+                "maxLength" : 1,
+                "type" : "string"
+              },
+              "SMXDSAINDEX" : {
+                "maxLength" : 1,
+                "type" : "string"
+              },
+              "FILL_16" : {
+                "maxLength" : 1,
+                "type" : "string"
+              },
+              "SMXDSASZ" : {
+                "minimum" : -99999999,
+                "maximum" : 99999999,
+                "type" : "integer"
+              },
+              "SMXHWMDSASZ" : {
+                "minimum" : -99999999,
+                "maximum" : 99999999,
+                "type" : "integer"
+              },
+              "SMXCSIZE" : {
+                "minimum" : -99999999,
+                "maximum" : 99999999,
+                "type" : "integer"
+              },
+              "SMXGMREQ" : {
+                "minimum" : -99999999,
+                "maximum" : 99999999,
+                "type" : "integer"
+              },
+              "SMXFMREQ" : {
+                "minimum" : -99999999,
+                "maximum" : 99999999,
+                "type" : "integer"
+              },
+              "SMXASR" : {
+                "minimum" : -99999999,
+                "maximum" : 99999999,
+                "type" : "integer"
+              },
+              "SMXDSR" : {
+                "minimum" : -99999999,
+                "maximum" : 99999999,
+                "type" : "integer"
+              },
+              "SMXCRISS" : {
+                "minimum" : -99999999,
+                "maximum" : 99999999,
+                "type" : "integer"
+              },
+              "SMXUCSS" : {
+                "minimum" : -99999999,
+                "maximum" : 99999999,
+                "type" : "integer"
+              },
+              "SMXCSS" : {
+                "minimum" : -99999999,
+                "maximum" : 99999999,
+                "type" : "integer"
+              },
+              "SMXHWMSS" : {
+                "minimum" : -99999999,
+                "maximum" : 99999999,
+                "type" : "integer"
+              },
+              "SMXPWWS" : {
+                "minimum" : -99999999,
+                "maximum" : 99999999,
+                "type" : "integer"
+              },
+              "SMXCREL" : {
+                "minimum" : -99999999,
+                "maximum" : 99999999,
+                "type" : "integer"
+              },
+              "SMXSOS" : {
+                "minimum" : -99999999,
+                "maximum" : 99999999,
+                "type" : "integer"
+              },
+              "FILL_17" : {
+                "minimum" : -99999999,
+                "maximum" : 99999999,
+                "type" : "integer"
+              },
+              "SMXTSOS" : {
+                "minimum" : -9999999999999999,
+                "maximum" : 9999999999999999,
+                "type" : "integer"
+              },
+              "SMXCSUBP" : {
+                "minimum" : -99999999,
+                "maximum" : 99999999,
+                "type" : "integer"
+              },
+              "SMXFSTG" : {
+                "minimum" : -99999999,
+                "maximum" : 99999999,
+                "type" : "integer"
+              },
+              "SMXHWMFSTG" : {
+                "minimum" : -99999999,
+                "maximum" : 99999999,
+                "type" : "integer"
+              },
+              "SMXLWMFSTG" : {
+                "minimum" : -99999999,
+                "maximum" : 99999999,
+                "type" : "integer"
+              },
+              "SMXLFA" : {
+                "minimum" : -99999999,
+                "maximum" : 99999999,
+                "type" : "integer"
+              },
+              "SMXSV" : {
+                "minimum" : -99999999,
+                "maximum" : 99999999,
+                "type" : "integer"
+              },
+              "SMXEXTS" : {
+                "minimum" : -99999999,
+                "maximum" : 99999999,
+                "type" : "integer"
+              },
+              "SMXEXTSA" : {
+                "minimum" : -99999999,
+                "maximum" : 99999999,
+                "type" : "integer"
+              },
+              "SMXEXTSR" : {
+                "minimum" : -99999999,
+                "maximum" : 99999999,
+                "type" : "integer"
+              },
+              "FILL_18" : {
+                "minimum" : -99999999,
+                "maximum" : 99999999,
+                "type" : "integer"
+              },
+              "FILL_19" : {
+                "minimum" : -99999999,
+                "maximum" : 99999999,
+                "type" : "integer"
+              },
+              "FILL_20" : {
+                "minimum" : -99999999,
+                "maximum" : 99999999,
+                "type" : "integer"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

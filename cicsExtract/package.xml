@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<zosConnectApi xmlns="http://www.ibm.com/zosConnect/2.0/zosConnectApi" id="cicsextract">
+    <apiSpec title="cicsextract" basePath="/cicsextract" description="" version="1.0.0">
+        <path relativePath="/cicsextract/tcb">
+            <method type="GET" zosConnectServiceRef="cicsExtrTCB" httpXformFile="api/cicsextract/tcb/GET/mapping.xml" operationId="getCicsExtrTCB"></method>
+        </path>
+        <path relativePath="/cicsextract/sms">
+            <method type="GET" zosConnectServiceRef="cicsExtrSMS" httpXformFile="api/cicsextract/sms/GET/mapping.xml" operationId="getCicsExtrSMS"/>
+        </path>
+        <apiDoc docType="SWAGGER">api-docs/swagger.json</apiDoc>
+    </apiSpec>
+</zosConnectApi>

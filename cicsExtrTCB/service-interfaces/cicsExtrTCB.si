@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:message xmlns:ns2="http://www.ibm.com/ims/Transaction" transactionCode="" messageName="cicsExtrTCB" direction="0" serviceType="CICS_COMM_AREA">
+    <message id="1" name="cicsExtrTCB">
+        <segment id="1" name="COMMAREA" originalName="COMMAREA">
+            <field name="USRDSGDS" originalName="USRDSGDS" included="Y" path="USRDSGDS">
+                <startPos>1</startPos>
+                <bytes>3680</bytes>
+                <maxBytes>3680</maxBytes>
+                <marshaller alignment="NATURAL"/>
+                <applicationDatatype datatype="STRUCT"/>
+                <field name="DSGLEN" originalName="DSGLEN" included="N" path="USRDSGDS.DSGLEN">
+                    <startPos>1</startPos>
+                    <bytes>2</bytes>
+                    <maxBytes>2</maxBytes>
+                    <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                    <applicationDatatype datatype="SHORT" precision="4"/>
+                </field>
+                <field name="DSGID" originalName="DSGID" included="N" path="USRDSGDS.DSGID">
+                    <startPos>3</startPos>
+                    <bytes>2</bytes>
+                    <maxBytes>2</maxBytes>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+                <field name="DSGDVERS" originalName="DSGDVERS" included="N" path="USRDSGDS.DSGDVERS">
+                    <startPos>5</startPos>
+                    <bytes>1</bytes>
+                    <maxBytes>1</maxBytes>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+                <field name="FILL_0" originalName="FILL_0" included="N" path="USRDSGDS.FILL_0">
+                    <startPos>6</startPos>
+                    <bytes>3</bytes>
+                    <maxBytes>3</maxBytes>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+                <field name="DSGHDR" originalName="DSGHDR" included="N" path="USRDSGDS.DSGHDR">
+                    <startPos>9</startPos>
+                    <bytes>8</bytes>
+                    <maxBytes>8</maxBytes>
+                    <marshaller alignment="NATURAL"/>
+                    <applicationDatatype datatype="STRUCT"/>
+                    <field name="DSGGLEN" originalName="DSGGLEN" included="N" path="USRDSGDS.DSGHDR.DSGGLEN">
+                        <startPos>9</startPos>
+                        <bytes>2</bytes>
+                        <maxBytes>2</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="SHORT" precision="4"/>
+                    </field>
+                    <field name="DSGASIZE" originalName="DSGASIZE" included="N" path="USRDSGDS.DSGHDR.DSGASIZE">
+                        <startPos>11</startPos>
+                        <bytes>2</bytes>
+                        <maxBytes>2</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="SHORT" precision="4"/>
+                    </field>
+                    <field name="DSGPSIZE" originalName="DSGPSIZE" included="N" path="USRDSGDS.DSGHDR.DSGPSIZE">
+                        <startPos>13</startPos>
+                        <bytes>2</bytes>
+                        <maxBytes>2</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="SHORT" precision="4"/>
+                    </field>
+                    <field name="FILL_1" originalName="FILL_1" included="N" path="USRDSGDS.DSGHDR.FILL_1">
+                        <startPos>15</startPos>
+                        <bytes>2</bytes>
+                        <maxBytes>2</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                </field>
+                <field name="DSGSTATS" originalName="DSGSTATS" included="N" path="USRDSGDS.DSGSTATS">
+                    <startPos>17</startPos>
+                    <bytes>144</bytes>
+                    <maxBytes>144</maxBytes>
+                    <marshaller alignment="NATURAL"/>
+                    <applicationDatatype datatype="STRUCT"/>
+                    <field name="DSGICVT" originalName="DSGICVT" included="N" path="USRDSGDS.DSGSTATS.DSGICVT">
+                        <startPos>17</startPos>
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="DSGICVRT" originalName="DSGICVRT" included="N" path="USRDSGDS.DSGSTATS.DSGICVRT">
+                        <startPos>21</startPos>
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="DSGICVSD" originalName="DSGICVSD" included="N" path="USRDSGDS.DSGSTATS.DSGICVSD">
+                        <startPos>25</startPos>
+                        <bytes>2</bytes>
+                        <maxBytes>2</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="SHORT" precision="4"/>
+                    </field>
+                    <field name="DSGPRIAG" originalName="DSGPRIAG" included="N" path="USRDSGDS.DSGSTATS.DSGPRIAG">
+                        <startPos>27</startPos>
+                        <bytes>2</bytes>
+                        <maxBytes>2</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="SHORT" precision="4"/>
+                    </field>
+                    <field name="DSGSTSKS" originalName="DSGSTSKS" included="N" path="USRDSGDS.DSGSTATS.DSGSTSKS">
+                        <startPos>29</startPos>
+                        <bytes>2</bytes>
+                        <maxBytes>2</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="SHORT" precision="4"/>
+                    </field>
+                    <field name="DSGMBTCH" originalName="DSGMBTCH" included="N" path="USRDSGDS.DSGSTATS.DSGMBTCH">
+                        <startPos>31</startPos>
+                        <bytes>2</bytes>
+                        <maxBytes>2</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="SHORT" precision="4"/>
+                    </field>
+                    <field name="FILL_2" originalName="FILL_2" included="N" path="USRDSGDS.DSGSTATS.FILL_2">
+                        <startPos>33</startPos>
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="DSGCNT" originalName="DSGCNT" included="N" path="USRDSGDS.DSGSTATS.DSGCNT">
+                        <startPos>37</startPos>
+                        <bytes>2</bytes>
+                        <maxBytes>2</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="SHORT" precision="4"/>
+                    </field>
+                    <field name="DSGPNT" originalName="DSGPNT" included="N" path="USRDSGDS.DSGSTATS.DSGPNT">
+                        <startPos>39</startPos>
+                        <bytes>2</bytes>
+                        <maxBytes>2</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="SHORT" precision="4"/>
+                    </field>
+                    <field name="FILL_3" originalName="FILL_3" included="N" path="USRDSGDS.DSGSTATS.FILL_3">
+                        <startPos>41</startPos>
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="FILL_4" originalName="FILL_4" included="N" path="USRDSGDS.DSGSTATS.FILL_4">
+                        <startPos>49</startPos>
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="DSGSTART" originalName="DSGSTART" included="N" path="USRDSGDS.DSGSTATS.DSGSTART">
+                        <startPos>57</startPos>
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="DSGLSTRT" originalName="DSGLSTRT" included="N" path="USRDSGDS.DSGSTATS.DSGLSTRT">
+                        <startPos>65</startPos>
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="DSGEJST" originalName="DSGEJST" included="N" path="USRDSGDS.DSGSTATS.DSGEJST">
+                        <startPos>73</startPos>
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="DSGSRBT" originalName="DSGSRBT" included="N" path="USRDSGDS.DSGSTATS.DSGSRBT">
+                        <startPos>81</startPos>
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="FILL_5" originalName="FILL_5" included="N" path="USRDSGDS.DSGSTATS.FILL_5">
+                        <startPos>89</startPos>
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="FILL_6" originalName="FILL_6" included="N" path="USRDSGDS.DSGSTATS.FILL_6">
+                        <startPos>97</startPos>
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="FILL_7" originalName="FILL_7" included="N" path="USRDSGDS.DSGSTATS.FILL_7">
+                        <startPos>101</startPos>
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="DSGXSCNS" originalName="DSGXSCNS" included="N" path="USRDSGDS.DSGSTATS.DSGXSCNS">
+                        <startPos>105</startPos>
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="DSGXSCNN" originalName="DSGXSCNN" included="N" path="USRDSGDS.DSGSTATS.DSGXSCNN">
+                        <startPos>109</startPos>
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="DSGXTCBD" originalName="DSGXTCBD" included="N" path="USRDSGDS.DSGSTATS.DSGXTCBD">
+                        <startPos>113</startPos>
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="FILL_8" originalName="FILL_8" included="N" path="USRDSGDS.DSGSTATS.FILL_8">
+                        <startPos>117</startPos>
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="DSGGXSCN" originalName="DSGGXSCN" included="N" path="USRDSGDS.DSGSTATS.DSGGXSCN">
+                        <startPos>121</startPos>
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="DSGLXSCN" originalName="DSGLXSCN" included="N" path="USRDSGDS.DSGSTATS.DSGLXSCN">
+                        <startPos>129</startPos>
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="DSGGXSND" originalName="DSGGXSND" included="N" path="USRDSGDS.DSGSTATS.DSGGXSND">
+                        <startPos>137</startPos>
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="DSGLXSND" originalName="DSGLXSND" included="N" path="USRDSGDS.DSGSTATS.DSGLXSND">
+                        <startPos>145</startPos>
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="FILL_9" originalName="FILL_9" included="N" path="USRDSGDS.DSGSTATS.FILL_9">
+                        <startPos>153</startPos>
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                </field>
+                <field name="DSG_TCB_MODE" originalName="DSG_TCB_MODE" included="N" path="USRDSGDS.DSG_TCB_MODE" minOccurs="18" maxOccurs="18">
+                    <startPos>161</startPos>
+                    <bytes>2880</bytes>
+                    <maxBytes>2880</maxBytes>
+                    <marshaller alignment="NATURAL"/>
+                    <applicationDatatype datatype="ARRAY"/>
+                    <field name="DSGTCBNM" originalName="DSGTCBNM" included="N" path="USRDSGDS.DSG_TCB_MODE.DSGTCBNM">
+                        <bytes>2</bytes>
+                        <maxBytes>2</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="DSGTCBMD" originalName="DSGTCBMD" included="N" path="USRDSGDS.DSG_TCB_MODE.DSGTCBMD">
+                        <bytes>1</bytes>
+                        <maxBytes>1</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="FILL_10" originalName="FILL_10" included="N" path="USRDSGDS.DSG_TCB_MODE.FILL_10">
+                        <bytes>1</bytes>
+                        <maxBytes>1</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="DSGTCBMP" originalName="DSGTCBMP" included="N" path="USRDSGDS.DSG_TCB_MODE.DSGTCBMP">
+                        <bytes>2</bytes>
+                        <maxBytes>2</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="SHORT" precision="4"/>
+                    </field>
+                    <field name="FILL_11" originalName="FILL_11" included="N" path="USRDSGDS.DSG_TCB_MODE.FILL_11">
+                        <bytes>2</bytes>
+                        <maxBytes>2</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="DSGNTCBA" originalName="DSGNTCBA" included="N" path="USRDSGDS.DSG_TCB_MODE.DSGNTCBA">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="DSGTCBAF" originalName="DSGTCBAF" included="N" path="USRDSGDS.DSG_TCB_MODE.DSGTCBAF">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="DSGTCBCA" originalName="DSGTCBCA" included="N" path="USRDSGDS.DSG_TCB_MODE.DSGTCBCA">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="DSGTCBPA" originalName="DSGTCBPA" included="N" path="USRDSGDS.DSG_TCB_MODE.DSGTCBPA">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="FILL_12" originalName="FILL_12" included="N" path="USRDSGDS.DSG_TCB_MODE.FILL_12">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="DSGTCBCU" originalName="DSGTCBCU" included="N" path="USRDSGDS.DSG_TCB_MODE.DSGTCBCU">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="DSGTCBPU" originalName="DSGTCBPU" included="N" path="USRDSGDS.DSG_TCB_MODE.DSGTCBPU">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="FILL_13" originalName="FILL_13" included="N" path="USRDSGDS.DSG_TCB_MODE.FILL_13">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="FILL_14" originalName="FILL_14" included="N" path="USRDSGDS.DSG_TCB_MODE.FILL_14">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="DSGTCBAL" originalName="DSGTCBAL" included="N" path="USRDSGDS.DSG_TCB_MODE.DSGTCBAL">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="FILL_15" originalName="FILL_15" included="N" path="USRDSGDS.DSG_TCB_MODE.FILL_15">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="DSGTCBDU" originalName="DSGTCBDU" included="N" path="USRDSGDS.DSG_TCB_MODE.DSGTCBDU">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="DSGTCBDS" originalName="DSGTCBDS" included="N" path="USRDSGDS.DSG_TCB_MODE.DSGTCBDS">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="DSGTCBDX" originalName="DSGTCBDX" included="N" path="USRDSGDS.DSG_TCB_MODE.DSGTCBDX">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="DSGTCBDO" originalName="DSGTCBDO" included="N" path="USRDSGDS.DSG_TCB_MODE.DSGTCBDO">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="FILL_16" originalName="FILL_16" included="N" path="USRDSGDS.DSG_TCB_MODE.FILL_16">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="DSGTCBST" originalName="DSGTCBST" included="N" path="USRDSGDS.DSG_TCB_MODE.DSGTCBST">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="DSGTCBMM" originalName="DSGTCBMM" included="N" path="USRDSGDS.DSG_TCB_MODE.DSGTCBMM">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="DSGSYSW" originalName="DSGSYSW" included="N" path="USRDSGDS.DSG_TCB_MODE.DSGSYSW">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="FILL_17" originalName="FILL_17" included="N" path="USRDSGDS.DSG_TCB_MODE.FILL_17">
+                        <bytes>12</bytes>
+                        <maxBytes>12</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="DSGTMCDQ" originalName="DSGTMCDQ" included="N" path="USRDSGDS.DSG_TCB_MODE.DSGTMCDQ">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="DSGTMPDQ" originalName="DSGTMPDQ" included="N" path="USRDSGDS.DSG_TCB_MODE.DSGTMPDQ">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="DSGTMADQ" originalName="DSGTMADQ" included="N" path="USRDSGDS.DSG_TCB_MODE.DSGTMADQ">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="FILL_18" originalName="FILL_18" included="N" path="USRDSGDS.DSG_TCB_MODE.FILL_18">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="DSGTWT" originalName="DSGTWT" included="N" path="USRDSGDS.DSG_TCB_MODE.DSGTWT">
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="DSGTDT" originalName="DSGTDT" included="N" path="USRDSGDS.DSG_TCB_MODE.DSGTDT">
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="DSGTCT" originalName="DSGTCT" included="N" path="USRDSGDS.DSG_TCB_MODE.DSGTCT">
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="DSGACT" originalName="DSGACT" included="N" path="USRDSGDS.DSG_TCB_MODE.DSGACT">
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="FILL_19" originalName="FILL_19" included="N" path="USRDSGDS.DSG_TCB_MODE.FILL_19">
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="FILL_20" originalName="FILL_20" included="N" path="USRDSGDS.DSG_TCB_MODE.FILL_20">
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                </field>
+                <field name="DSG_TCB_POOL" originalName="DSG_TCB_POOL" included="N" path="USRDSGDS.DSG_TCB_POOL" minOccurs="4" maxOccurs="4">
+                    <startPos>3041</startPos>
+                    <bytes>640</bytes>
+                    <maxBytes>640</maxBytes>
+                    <marshaller alignment="NATURAL"/>
+                    <applicationDatatype datatype="ARRAY"/>
+                    <field name="DSGTCBPN" originalName="DSGTCBPN" included="N" path="USRDSGDS.DSG_TCB_POOL.DSGTCBPN">
+                        <bytes>2</bytes>
+                        <maxBytes>2</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="SHORT" precision="4"/>
+                    </field>
+                    <field name="FILL_21" originalName="FILL_21" included="N" path="USRDSGDS.DSG_TCB_POOL.FILL_21">
+                        <bytes>2</bytes>
+                        <maxBytes>2</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="DSGMXTCB" originalName="DSGMXTCB" included="N" path="USRDSGDS.DSG_TCB_POOL.DSGMXTCB">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="DSGCNUAT" originalName="DSGCNUAT" included="N" path="USRDSGDS.DSG_TCB_POOL.DSGCNUAT">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="DSGPNUAT" originalName="DSGPNUAT" included="N" path="USRDSGDS.DSG_TCB_POOL.DSGPNUAT">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="DSGCNUUS" originalName="DSGCNUUS" included="N" path="USRDSGDS.DSG_TCB_POOL.DSGCNUUS">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="DSGPNUUS" originalName="DSGPNUUS" included="N" path="USRDSGDS.DSG_TCB_POOL.DSGPNUUS">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="FILL_22" originalName="FILL_22" included="N" path="USRDSGDS.DSG_TCB_POOL.FILL_22">
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="DSGNTCBL" originalName="DSGNTCBL" included="N" path="USRDSGDS.DSG_TCB_POOL.DSGNTCBL">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="FILL_23" originalName="FILL_23" included="N" path="USRDSGDS.DSG_TCB_POOL.FILL_23">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="DSGTOTWL" originalName="DSGTOTWL" included="N" path="USRDSGDS.DSG_TCB_POOL.DSGTOTWL">
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="DSGCURWT" originalName="DSGCURWT" included="N" path="USRDSGDS.DSG_TCB_POOL.DSGCURWT">
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="DSGTOTMT" originalName="DSGTOTMT" included="N" path="USRDSGDS.DSG_TCB_POOL.DSGTOTMT">
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="DSGTOTNW" originalName="DSGTOTNW" included="N" path="USRDSGDS.DSG_TCB_POOL.DSGTOTNW">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="DSGTOTMW" originalName="DSGTOTMW" included="N" path="USRDSGDS.DSG_TCB_POOL.DSGTOTMW">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="DSGCURNW" originalName="DSGCURNW" included="N" path="USRDSGDS.DSG_TCB_POOL.DSGCURNW">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="DSGPEANW" originalName="DSGPEANW" included="N" path="USRDSGDS.DSG_TCB_POOL.DSGPEANW">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="FILL_24" originalName="FILL_24" included="N" path="USRDSGDS.DSG_TCB_POOL.FILL_24">
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="FILL_25" originalName="FILL_25" included="N" path="USRDSGDS.DSG_TCB_POOL.FILL_25">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="DSGMMWTS" originalName="DSGMMWTS" included="N" path="USRDSGDS.DSG_TCB_POOL.DSGMMWTS">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="DSGMMWTM" originalName="DSGMMWTM" included="N" path="USRDSGDS.DSG_TCB_POOL.DSGMMWTM">
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="FILL_26" originalName="FILL_26" included="N" path="USRDSGDS.DSG_TCB_POOL.FILL_26">
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="DSGCMMWS" originalName="DSGCMMWS" included="N" path="USRDSGDS.DSG_TCB_POOL.DSGCMMWS">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="DSGPMMWS" originalName="DSGPMMWS" included="N" path="USRDSGDS.DSG_TCB_POOL.DSGPMMWS">
+                        <bytes>4</bytes>
+                        <maxBytes>4</maxBytes>
+                        <marshaller isNativeInteger="N" alignment="NATURAL"/>
+                        <applicationDatatype datatype="INT" precision="8"/>
+                    </field>
+                    <field name="DSGCMMWT" originalName="DSGCMMWT" included="N" path="USRDSGDS.DSG_TCB_POOL.DSGCMMWT">
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="DSGGTCBL" originalName="DSGGTCBL" included="N" path="USRDSGDS.DSG_TCB_POOL.DSGGTCBL">
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="DSGLTCBL" originalName="DSGLTCBL" included="N" path="USRDSGDS.DSG_TCB_POOL.DSGLTCBL">
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="FILL_27" originalName="FILL_27" included="N" path="USRDSGDS.DSG_TCB_POOL.FILL_27">
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="FILL_28" originalName="FILL_28" included="N" path="USRDSGDS.DSG_TCB_POOL.FILL_28">
+                        <bytes>8</bytes>
+                        <maxBytes>8</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                </field>
+            </field>
+        </segment>
+    </message>
+</ns2:message>

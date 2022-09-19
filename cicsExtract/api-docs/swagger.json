@@ -1,0 +1,1022 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "",
+    "version" : "1.0.0",
+    "title" : "cicsextract"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/cicsextract",
+  "schemes" : [ "https", "http" ],
+  "consumes" : [ "application/json" ],
+  "produces" : [ "application/json" ],
+  "paths" : {
+    "/cicsextract/sms" : {
+      "get" : {
+        "tags" : [ "cicsextract" ],
+        "operationId" : "getCicsExtrSMS",
+        "parameters" : [ {
+          "name" : "Authorization",
+          "in" : "header",
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : "#/definitions/getCicsExtrSMS_response_200"
+            }
+          }
+        }
+      }
+    },
+    "/cicsextract/tcb" : {
+      "get" : {
+        "tags" : [ "cicsextract" ],
+        "operationId" : "getCicsExtrTCB",
+        "parameters" : [ {
+          "name" : "Authorization",
+          "in" : "header",
+          "required" : false,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : "#/definitions/getCicsExtrTCB_response_200"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "getCicsExtrTCB_response_200" : {
+      "type" : "object",
+      "properties" : {
+        "USRDSGDS" : {
+          "type" : "object",
+          "properties" : {
+            "DSGLEN" : {
+              "type" : "integer",
+              "minimum" : -9999,
+              "maximum" : 9999
+            },
+            "DSGID" : {
+              "type" : "string",
+              "maxLength" : 2
+            },
+            "DSGDVERS" : {
+              "type" : "string",
+              "maxLength" : 1
+            },
+            "FILL_0" : {
+              "type" : "string",
+              "maxLength" : 3
+            },
+            "DSGHDR" : {
+              "type" : "object",
+              "properties" : {
+                "DSGGLEN" : {
+                  "type" : "integer",
+                  "minimum" : -9999,
+                  "maximum" : 9999
+                },
+                "DSGASIZE" : {
+                  "type" : "integer",
+                  "minimum" : -9999,
+                  "maximum" : 9999
+                },
+                "DSGPSIZE" : {
+                  "type" : "integer",
+                  "minimum" : -9999,
+                  "maximum" : 9999
+                },
+                "FILL_1" : {
+                  "type" : "string",
+                  "maxLength" : 2
+                }
+              }
+            },
+            "DSGSTATS" : {
+              "type" : "object",
+              "properties" : {
+                "DSGICVT" : {
+                  "type" : "integer",
+                  "minimum" : -99999999,
+                  "maximum" : 99999999
+                },
+                "DSGICVRT" : {
+                  "type" : "integer",
+                  "minimum" : -99999999,
+                  "maximum" : 99999999
+                },
+                "DSGICVSD" : {
+                  "type" : "integer",
+                  "minimum" : -9999,
+                  "maximum" : 9999
+                },
+                "DSGPRIAG" : {
+                  "type" : "integer",
+                  "minimum" : -9999,
+                  "maximum" : 9999
+                },
+                "DSGSTSKS" : {
+                  "type" : "integer",
+                  "minimum" : -9999,
+                  "maximum" : 9999
+                },
+                "DSGMBTCH" : {
+                  "type" : "integer",
+                  "minimum" : -9999,
+                  "maximum" : 9999
+                },
+                "FILL_2" : {
+                  "type" : "string",
+                  "maxLength" : 4
+                },
+                "DSGCNT" : {
+                  "type" : "integer",
+                  "minimum" : -9999,
+                  "maximum" : 9999
+                },
+                "DSGPNT" : {
+                  "type" : "integer",
+                  "minimum" : -9999,
+                  "maximum" : 9999
+                },
+                "FILL_3" : {
+                  "type" : "string",
+                  "maxLength" : 8
+                },
+                "FILL_4" : {
+                  "type" : "string",
+                  "maxLength" : 8
+                },
+                "DSGSTART" : {
+                  "type" : "string",
+                  "maxLength" : 8
+                },
+                "DSGLSTRT" : {
+                  "type" : "string",
+                  "maxLength" : 8
+                },
+                "DSGEJST" : {
+                  "type" : "string",
+                  "maxLength" : 8
+                },
+                "DSGSRBT" : {
+                  "type" : "string",
+                  "maxLength" : 8
+                },
+                "FILL_5" : {
+                  "type" : "string",
+                  "maxLength" : 8
+                },
+                "FILL_6" : {
+                  "type" : "string",
+                  "maxLength" : 4
+                },
+                "FILL_7" : {
+                  "type" : "string",
+                  "maxLength" : 4
+                },
+                "DSGXSCNS" : {
+                  "type" : "integer",
+                  "minimum" : -99999999,
+                  "maximum" : 99999999
+                },
+                "DSGXSCNN" : {
+                  "type" : "integer",
+                  "minimum" : -99999999,
+                  "maximum" : 99999999
+                },
+                "DSGXTCBD" : {
+                  "type" : "integer",
+                  "minimum" : -99999999,
+                  "maximum" : 99999999
+                },
+                "FILL_8" : {
+                  "type" : "integer",
+                  "minimum" : -99999999,
+                  "maximum" : 99999999
+                },
+                "DSGGXSCN" : {
+                  "type" : "string",
+                  "maxLength" : 8
+                },
+                "DSGLXSCN" : {
+                  "type" : "string",
+                  "maxLength" : 8
+                },
+                "DSGGXSND" : {
+                  "type" : "string",
+                  "maxLength" : 8
+                },
+                "DSGLXSND" : {
+                  "type" : "string",
+                  "maxLength" : 8
+                },
+                "FILL_9" : {
+                  "type" : "string",
+                  "maxLength" : 8
+                }
+              }
+            },
+            "DSG_TCB_MODE" : {
+              "type" : "array",
+              "items" : {
+                "type" : "object",
+                "properties" : {
+                  "DSGTCBNM" : {
+                    "type" : "string",
+                    "maxLength" : 2
+                  },
+                  "DSGTCBMD" : {
+                    "type" : "string",
+                    "maxLength" : 1
+                  },
+                  "FILL_10" : {
+                    "type" : "string",
+                    "maxLength" : 1
+                  },
+                  "DSGTCBMP" : {
+                    "type" : "integer",
+                    "minimum" : -9999,
+                    "maximum" : 9999
+                  },
+                  "FILL_11" : {
+                    "type" : "string",
+                    "maxLength" : 2
+                  },
+                  "DSGNTCBA" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "DSGTCBAF" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "DSGTCBCA" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "DSGTCBPA" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "FILL_12" : {
+                    "type" : "string",
+                    "maxLength" : 4
+                  },
+                  "DSGTCBCU" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "DSGTCBPU" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "FILL_13" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "FILL_14" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "DSGTCBAL" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "FILL_15" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "DSGTCBDU" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "DSGTCBDS" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "DSGTCBDX" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "DSGTCBDO" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "FILL_16" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "DSGTCBST" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "DSGTCBMM" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "DSGSYSW" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "FILL_17" : {
+                    "type" : "string",
+                    "maxLength" : 12
+                  },
+                  "DSGTMCDQ" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "DSGTMPDQ" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "DSGTMADQ" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "FILL_18" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "DSGTWT" : {
+                    "type" : "string",
+                    "maxLength" : 8
+                  },
+                  "DSGTDT" : {
+                    "type" : "string",
+                    "maxLength" : 8
+                  },
+                  "DSGTCT" : {
+                    "type" : "string",
+                    "maxLength" : 8
+                  },
+                  "DSGACT" : {
+                    "type" : "string",
+                    "maxLength" : 8
+                  },
+                  "FILL_19" : {
+                    "type" : "string",
+                    "maxLength" : 8
+                  },
+                  "FILL_20" : {
+                    "type" : "string",
+                    "maxLength" : 8
+                  }
+                }
+              },
+              "maxItems" : 18,
+              "minItems" : 18
+            },
+            "DSG_TCB_POOL" : {
+              "type" : "array",
+              "items" : {
+                "type" : "object",
+                "properties" : {
+                  "DSGTCBPN" : {
+                    "type" : "integer",
+                    "minimum" : -9999,
+                    "maximum" : 9999
+                  },
+                  "FILL_21" : {
+                    "type" : "string",
+                    "maxLength" : 2
+                  },
+                  "DSGMXTCB" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "DSGCNUAT" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "DSGPNUAT" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "DSGCNUUS" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "DSGPNUUS" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "FILL_22" : {
+                    "type" : "string",
+                    "maxLength" : 8
+                  },
+                  "DSGNTCBL" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "FILL_23" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "DSGTOTWL" : {
+                    "type" : "string",
+                    "maxLength" : 8
+                  },
+                  "DSGCURWT" : {
+                    "type" : "string",
+                    "maxLength" : 8
+                  },
+                  "DSGTOTMT" : {
+                    "type" : "string",
+                    "maxLength" : 8
+                  },
+                  "DSGTOTNW" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "DSGTOTMW" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "DSGCURNW" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "DSGPEANW" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "FILL_24" : {
+                    "type" : "string",
+                    "maxLength" : 8
+                  },
+                  "FILL_25" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "DSGMMWTS" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "DSGMMWTM" : {
+                    "type" : "string",
+                    "maxLength" : 8
+                  },
+                  "FILL_26" : {
+                    "type" : "string",
+                    "maxLength" : 8
+                  },
+                  "DSGCMMWS" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "DSGPMMWS" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "DSGCMMWT" : {
+                    "type" : "string",
+                    "maxLength" : 8
+                  },
+                  "DSGGTCBL" : {
+                    "type" : "string",
+                    "maxLength" : 8
+                  },
+                  "DSGLTCBL" : {
+                    "type" : "string",
+                    "maxLength" : 8
+                  },
+                  "FILL_27" : {
+                    "type" : "string",
+                    "maxLength" : 8
+                  },
+                  "FILL_28" : {
+                    "type" : "string",
+                    "maxLength" : 8
+                  }
+                }
+              },
+              "maxItems" : 4,
+              "minItems" : 4
+            }
+          }
+        }
+      }
+    },
+    "getCicsExtrSMS_response_200" : {
+      "type" : "object",
+      "properties" : {
+        "DFHSMXDS" : {
+          "type" : "object",
+          "properties" : {
+            "SMXLEN" : {
+              "type" : "integer",
+              "minimum" : -9999,
+              "maximum" : 9999
+            },
+            "SMXID" : {
+              "type" : "string",
+              "maxLength" : 2
+            },
+            "SMXDVERS" : {
+              "type" : "string",
+              "maxLength" : 1
+            },
+            "FILL_0" : {
+              "type" : "string",
+              "maxLength" : 3
+            },
+            "SMXGBLLEN" : {
+              "type" : "integer",
+              "minimum" : -9999,
+              "maximum" : 9999
+            },
+            "SMXSTGPROT" : {
+              "type" : "string",
+              "maxLength" : 1
+            },
+            "SMXRENTPGM" : {
+              "type" : "string",
+              "maxLength" : 1
+            },
+            "SMXTRANISO" : {
+              "type" : "string",
+              "maxLength" : 1
+            },
+            "SMXMEMLIMITSRC" : {
+              "type" : "string",
+              "maxLength" : 1
+            },
+            "SMXUSSCUR" : {
+              "type" : "integer",
+              "minimum" : -99999999,
+              "maximum" : 99999999
+            },
+            "SMXUSSCUM" : {
+              "type" : "integer",
+              "minimum" : -99999999,
+              "maximum" : 99999999
+            },
+            "SMXUSSHWM" : {
+              "type" : "integer",
+              "minimum" : -99999999,
+              "maximum" : 99999999
+            },
+            "SMXCSSCUR" : {
+              "type" : "integer",
+              "minimum" : -99999999,
+              "maximum" : 99999999
+            },
+            "SMXCSSCUM" : {
+              "type" : "integer",
+              "minimum" : -99999999,
+              "maximum" : 99999999
+            },
+            "SMXCSSHWM" : {
+              "type" : "integer",
+              "minimum" : -99999999,
+              "maximum" : 99999999
+            },
+            "SMXDSALIMIT" : {
+              "type" : "integer",
+              "minimum" : -99999999,
+              "maximum" : 99999999
+            },
+            "SMXEDSALIMIT" : {
+              "type" : "integer",
+              "minimum" : -99999999,
+              "maximum" : 99999999
+            },
+            "SMXDSATOTAL" : {
+              "type" : "integer",
+              "minimum" : -99999999,
+              "maximum" : 99999999
+            },
+            "SMXEDSATOTAL" : {
+              "type" : "integer",
+              "minimum" : -99999999,
+              "maximum" : 99999999
+            },
+            "SMXHWMDSATOTAL" : {
+              "type" : "integer",
+              "minimum" : -99999999,
+              "maximum" : 99999999
+            },
+            "SMXHWMEDSATOTAL" : {
+              "type" : "integer",
+              "minimum" : -99999999,
+              "maximum" : 99999999
+            },
+            "SMXTIMEWAITMVS" : {
+              "type" : "integer",
+              "minimum" : -9999999999999999,
+              "maximum" : 9999999999999999
+            },
+            "SMXMVSSTGREQWAITS" : {
+              "type" : "integer",
+              "minimum" : -99999999,
+              "maximum" : 99999999
+            },
+            "FILL_1" : {
+              "type" : "integer",
+              "minimum" : -99999999,
+              "maximum" : 99999999
+            },
+            "FILL_2" : {
+              "type" : "integer",
+              "minimum" : -99999999,
+              "maximum" : 99999999
+            },
+            "FILL_3" : {
+              "type" : "integer",
+              "minimum" : -99999999,
+              "maximum" : 99999999
+            },
+            "SMX_MEMLIMIT" : {
+              "type" : "integer",
+              "minimum" : 0,
+              "maximum" : 999999999999999999
+            },
+            "SMX_GETSTOR_SIZE" : {
+              "type" : "integer",
+              "minimum" : 0,
+              "maximum" : 999999999999999999
+            },
+            "SMX_AS_ACTIVE" : {
+              "type" : "integer",
+              "minimum" : 0,
+              "maximum" : 999999999999999999
+            },
+            "SMX_HWM_AS_ACTIVE" : {
+              "type" : "integer",
+              "minimum" : 0,
+              "maximum" : 999999999999999999
+            },
+            "SMX_GDSA_ACTIVE" : {
+              "type" : "integer",
+              "minimum" : 0,
+              "maximum" : 999999999999999999
+            },
+            "SMX_HWM_GDSA_ACTIVE" : {
+              "type" : "integer",
+              "minimum" : 0,
+              "maximum" : 999999999999999999
+            },
+            "SMX_GDSA_ALLOCATED" : {
+              "type" : "integer",
+              "minimum" : 0,
+              "maximum" : 999999999999999999
+            },
+            "SMX_HWM_GDSA_ALLOCATED" : {
+              "type" : "integer",
+              "minimum" : 0,
+              "maximum" : 999999999999999999
+            },
+            "FILL_4" : {
+              "type" : "integer",
+              "minimum" : -99999999,
+              "maximum" : 99999999
+            },
+            "FILL_5" : {
+              "type" : "integer",
+              "minimum" : -99999999,
+              "maximum" : 99999999
+            },
+            "FILL_6" : {
+              "type" : "integer",
+              "minimum" : 0,
+              "maximum" : 999999999999999999
+            },
+            "FILL_7" : {
+              "type" : "integer",
+              "minimum" : 0,
+              "maximum" : 999999999999999999
+            },
+            "FILL_8" : {
+              "type" : "integer",
+              "minimum" : 0,
+              "maximum" : 999999999999999999
+            },
+            "SMXLVABYTES" : {
+              "type" : "integer",
+              "minimum" : 0,
+              "maximum" : 999999999999999999
+            },
+            "SMXLVHBYTES" : {
+              "type" : "integer",
+              "minimum" : 0,
+              "maximum" : 999999999999999999
+            },
+            "SMXLVGBYTES" : {
+              "type" : "integer",
+              "minimum" : 0,
+              "maximum" : 999999999999999999
+            },
+            "SMXLVNMEMOBJ" : {
+              "type" : "integer",
+              "minimum" : 0,
+              "maximum" : 999999999999999999
+            },
+            "FILL_9" : {
+              "type" : "integer",
+              "minimum" : 0,
+              "maximum" : 999999999999999999
+            },
+            "SMXFROMGUARDFAIL" : {
+              "type" : "integer",
+              "minimum" : 0,
+              "maximum" : 999999999999999999
+            },
+            "SMXFROMGUARDFAILSIZE" : {
+              "type" : "integer",
+              "minimum" : 0,
+              "maximum" : 999999999999999999
+            },
+            "FILL_10" : {
+              "type" : "integer",
+              "minimum" : 0,
+              "maximum" : 999999999999999999
+            },
+            "SMXLVSHRBYTES" : {
+              "type" : "integer",
+              "minimum" : 0,
+              "maximum" : 999999999999999999
+            },
+            "SMXLVSHRGBYTES" : {
+              "type" : "integer",
+              "minimum" : 0,
+              "maximum" : 999999999999999999
+            },
+            "SMXLVSHRNMEMOBJ" : {
+              "type" : "integer",
+              "minimum" : 0,
+              "maximum" : 999999999999999999
+            },
+            "FILL_11" : {
+              "type" : "integer",
+              "minimum" : 0,
+              "maximum" : 999999999999999999
+            },
+            "SMXHVAUXSLOTS" : {
+              "type" : "integer",
+              "minimum" : 0,
+              "maximum" : 999999999999999999
+            },
+            "SMXHVGAUXSLOTS" : {
+              "type" : "integer",
+              "minimum" : 0,
+              "maximum" : 999999999999999999
+            },
+            "SMXHVPAGESINREAL" : {
+              "type" : "integer",
+              "minimum" : 0,
+              "maximum" : 999999999999999999
+            },
+            "SMXHVGPAGESINREAL" : {
+              "type" : "integer",
+              "minimum" : 0,
+              "maximum" : 999999999999999999
+            },
+            "SMXLARGEMEMOBJ" : {
+              "type" : "integer",
+              "minimum" : 0,
+              "maximum" : 999999999999999999
+            },
+            "SMXLARGEPAGESINREAL" : {
+              "type" : "integer",
+              "minimum" : 0,
+              "maximum" : 999999999999999999
+            },
+            "FILL_12" : {
+              "type" : "string",
+              "maxLength" : 8
+            },
+            "FILL_13" : {
+              "type" : "string",
+              "maxLength" : 8
+            },
+            "FILL_14" : {
+              "type" : "string",
+              "maxLength" : 8
+            },
+            "FILL_15" : {
+              "type" : "string",
+              "maxLength" : 8
+            },
+            "SMXBODY" : {
+              "type" : "array",
+              "items" : {
+                "type" : "object",
+                "properties" : {
+                  "SMXDSANAME" : {
+                    "type" : "string",
+                    "maxLength" : 8
+                  },
+                  "SMXLOCN" : {
+                    "type" : "string",
+                    "maxLength" : 1
+                  },
+                  "SMXACCESS" : {
+                    "type" : "string",
+                    "maxLength" : 1
+                  },
+                  "SMXDSAINDEX" : {
+                    "type" : "string",
+                    "maxLength" : 1
+                  },
+                  "FILL_16" : {
+                    "type" : "string",
+                    "maxLength" : 1
+                  },
+                  "SMXDSASZ" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "SMXHWMDSASZ" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "SMXCSIZE" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "SMXGMREQ" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "SMXFMREQ" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "SMXASR" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "SMXDSR" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "SMXCRISS" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "SMXUCSS" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "SMXCSS" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "SMXHWMSS" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "SMXPWWS" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "SMXCREL" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "SMXSOS" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "FILL_17" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "SMXTSOS" : {
+                    "type" : "integer",
+                    "minimum" : -9999999999999999,
+                    "maximum" : 9999999999999999
+                  },
+                  "SMXCSUBP" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "SMXFSTG" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "SMXHWMFSTG" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "SMXLWMFSTG" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "SMXLFA" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "SMXSV" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "SMXEXTS" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "SMXEXTSA" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "SMXEXTSR" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "FILL_18" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "FILL_19" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  },
+                  "FILL_20" : {
+                    "type" : "integer",
+                    "minimum" : -99999999,
+                    "maximum" : 99999999
+                  }
+                }
+              },
+              "maxItems" : 12,
+              "minItems" : 1
+            }
+          }
+        }
+      }
+    }
+  }
+}

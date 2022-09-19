@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns:ns2="http://www.ibm.com/ims/Transaction">
+    <shallow>true</shallow>
+    <serviceName>cicsExtrTCB</serviceName>
+    <serviceType>ims-rest</serviceType>
+    <resourceType>TRAN</resourceType>
+    <status>1</status>
+    <conversionType>3</conversionType>
+    <dataProtocol>0</dataProtocol>
+    <serviceInputInterface>
+        <metadataName>cicsExtrTCB.si</metadataName>
+        <serviceInterface>
+            <interface>
+                <segment segmentName="COMMAREA">
+                    <interfaceField included="Y" fieldName="USRDSGDS">
+                        <field included="N" fieldName="DSGLEN"/>
+                        <field included="N" fieldName="DSGID"/>
+                        <field included="N" fieldName="DSGDVERS"/>
+                        <field included="N" fieldName="FILL_0"/>
+                        <field included="N" fieldName="DSGHDR">
+                            <field included="N" fieldName="DSGGLEN"/>
+                            <field included="N" fieldName="DSGASIZE"/>
+                            <field included="N" fieldName="DSGPSIZE"/>
+                            <field included="N" fieldName="FILL_1"/>
+                        </field>
+                        <field included="N" fieldName="DSGSTATS">
+                            <field included="N" fieldName="DSGICVT"/>
+                            <field included="N" fieldName="DSGICVRT"/>
+                            <field included="N" fieldName="DSGICVSD"/>
+                            <field included="N" fieldName="DSGPRIAG"/>
+                            <field included="N" fieldName="DSGSTSKS"/>
+                            <field included="N" fieldName="DSGMBTCH"/>
+                            <field included="N" fieldName="FILL_2"/>
+                            <field included="N" fieldName="DSGCNT"/>
+                            <field included="N" fieldName="DSGPNT"/>
+                            <field included="N" fieldName="FILL_3"/>
+                            <field included="N" fieldName="FILL_4"/>
+                            <field included="N" fieldName="DSGSTART"/>
+                            <field included="N" fieldName="DSGLSTRT"/>
+                            <field included="N" fieldName="DSGEJST"/>
+                            <field included="N" fieldName="DSGSRBT"/>
+                            <field included="N" fieldName="FILL_5"/>
+                            <field included="N" fieldName="FILL_6"/>
+                            <field included="N" fieldName="FILL_7"/>
+                            <field included="N" fieldName="DSGXSCNS"/>
+                            <field included="N" fieldName="DSGXSCNN"/>
+                            <field included="N" fieldName="DSGXTCBD"/>
+                            <field included="N" fieldName="FILL_8"/>
+                            <field included="N" fieldName="DSGGXSCN"/>
+                            <field included="N" fieldName="DSGLXSCN"/>
+                            <field included="N" fieldName="DSGGXSND"/>
+                            <field included="N" fieldName="DSGLXSND"/>
+                            <field included="N" fieldName="FILL_9"/>
+                        </field>
+                        <field included="N" fieldName="DSG_TCB_MODE">
+                            <field included="N" fieldName="DSGTCBNM"/>
+                            <field included="N" fieldName="DSGTCBMD"/>
+                            <field included="N" fieldName="FILL_10"/>
+                            <field included="N" fieldName="DSGTCBMP"/>
+                            <field included="N" fieldName="FILL_11"/>
+                            <field included="N" fieldName="DSGNTCBA"/>
+                            <field included="N" fieldName="DSGTCBAF"/>
+                            <field included="N" fieldName="DSGTCBCA"/>
+                            <field included="N" fieldName="DSGTCBPA"/>
+                            <field included="N" fieldName="FILL_12"/>
+                            <field included="N" fieldName="DSGTCBCU"/>
+                            <field included="N" fieldName="DSGTCBPU"/>
+                            <field included="N" fieldName="FILL_13"/>
+                            <field included="N" fieldName="FILL_14"/>
+                            <field included="N" fieldName="DSGTCBAL"/>
+                            <field included="N" fieldName="FILL_15"/>
+                            <field included="N" fieldName="DSGTCBDU"/>
+                            <field included="N" fieldName="DSGTCBDS"/>
+                            <field included="N" fieldName="DSGTCBDX"/>
+                            <field included="N" fieldName="DSGTCBDO"/>
+                            <field included="N" fieldName="FILL_16"/>
+                            <field included="N" fieldName="DSGTCBST"/>
+                            <field included="N" fieldName="DSGTCBMM"/>
+                            <field included="N" fieldName="DSGSYSW"/>
+                            <field included="N" fieldName="FILL_17"/>
+                            <field included="N" fieldName="DSGTMCDQ"/>
+                            <field included="N" fieldName="DSGTMPDQ"/>
+                            <field included="N" fieldName="DSGTMADQ"/>
+                            <field included="N" fieldName="FILL_18"/>
+                            <field included="N" fieldName="DSGTWT"/>
+                            <field included="N" fieldName="DSGTDT"/>
+                            <field included="N" fieldName="DSGTCT"/>
+                            <field included="N" fieldName="DSGACT"/>
+                            <field included="N" fieldName="FILL_19"/>
+                            <field included="N" fieldName="FILL_20"/>
+                        </field>
+                        <field included="N" fieldName="DSG_TCB_POOL">
+                            <field included="N" fieldName="DSGTCBPN"/>
+                            <field included="N" fieldName="FILL_21"/>
+                            <field included="N" fieldName="DSGMXTCB"/>
+                            <field included="N" fieldName="DSGCNUAT"/>
+                            <field included="N" fieldName="DSGPNUAT"/>
+                            <field included="N" fieldName="DSGCNUUS"/>
+                            <field included="N" fieldName="DSGPNUUS"/>
+                            <field included="N" fieldName="FILL_22"/>
+                            <field included="N" fieldName="DSGNTCBL"/>
+                            <field included="N" fieldName="FILL_23"/>
+                            <field included="N" fieldName="DSGTOTWL"/>
+                            <field included="N" fieldName="DSGCURWT"/>
+                            <field included="N" fieldName="DSGTOTMT"/>
+                            <field included="N" fieldName="DSGTOTNW"/>
+                            <field included="N" fieldName="DSGTOTMW"/>
+                            <field included="N" fieldName="DSGCURNW"/>
+                            <field included="N" fieldName="DSGPEANW"/>
+                            <field included="N" fieldName="FILL_24"/>
+                            <field included="N" fieldName="FILL_25"/>
+                            <field included="N" fieldName="DSGMMWTS"/>
+                            <field included="N" fieldName="DSGMMWTM"/>
+                            <field included="N" fieldName="FILL_26"/>
+                            <field included="N" fieldName="DSGCMMWS"/>
+                            <field included="N" fieldName="DSGPMMWS"/>
+                            <field included="N" fieldName="DSGCMMWT"/>
+                            <field included="N" fieldName="DSGGTCBL"/>
+                            <field included="N" fieldName="DSGLTCBL"/>
+                            <field included="N" fieldName="FILL_27"/>
+                            <field included="N" fieldName="FILL_28"/>
+                        </field>
+                    </interfaceField>
+                </segment>
+            </interface>
+        </serviceInterface>
+        <version>0</version>
+    </serviceInputInterface>
+    <serviceOutputInterface>
+        <metadataName>cicsExtrTCBP.si</metadataName>
+        <serviceInterface>
+            <interface>
+                <segment segmentName="COMMAREA">
+                    <interfaceField included="Y" fieldName="USRDSGDS">
+                        <field included="Y" fieldName="DSGLEN"/>
+                        <field included="Y" fieldName="DSGID"/>
+                        <field included="Y" fieldName="DSGDVERS"/>
+                        <field included="Y" fieldName="FILL_0"/>
+                        <field included="Y" fieldName="DSGHDR">
+                            <field included="Y" fieldName="DSGGLEN"/>
+                            <field included="Y" fieldName="DSGASIZE"/>
+                            <field included="Y" fieldName="DSGPSIZE"/>
+                            <field included="Y" fieldName="FILL_1"/>
+                        </field>
+                        <field included="Y" fieldName="DSGSTATS">
+                            <field included="Y" fieldName="DSGICVT"/>
+                            <field included="Y" fieldName="DSGICVRT"/>
+                            <field included="Y" fieldName="DSGICVSD"/>
+                            <field included="Y" fieldName="DSGPRIAG"/>
+                            <field included="Y" fieldName="DSGSTSKS"/>
+                            <field included="Y" fieldName="DSGMBTCH"/>
+                            <field included="Y" fieldName="FILL_2"/>
+                            <field included="Y" fieldName="DSGCNT"/>
+                            <field included="Y" fieldName="DSGPNT"/>
+                            <field included="Y" fieldName="FILL_3"/>
+                            <field included="Y" fieldName="FILL_4"/>
+                            <field included="Y" fieldName="DSGSTART"/>
+                            <field included="Y" fieldName="DSGLSTRT"/>
+                            <field included="Y" fieldName="DSGEJST"/>
+                            <field included="Y" fieldName="DSGSRBT"/>
+                            <field included="Y" fieldName="FILL_5"/>
+                            <field included="Y" fieldName="FILL_6"/>
+                            <field included="Y" fieldName="FILL_7"/>
+                            <field included="Y" fieldName="DSGXSCNS"/>
+                            <field included="Y" fieldName="DSGXSCNN"/>
+                            <field included="Y" fieldName="DSGXTCBD"/>
+                            <field included="Y" fieldName="FILL_8"/>
+                            <field included="Y" fieldName="DSGGXSCN"/>
+                            <field included="Y" fieldName="DSGLXSCN"/>
+                            <field included="Y" fieldName="DSGGXSND"/>
+                            <field included="Y" fieldName="DSGLXSND"/>
+                            <field included="Y" fieldName="FILL_9"/>
+                        </field>
+                        <field included="Y" fieldName="DSG_TCB_MODE">
+                            <field included="Y" fieldName="DSGTCBNM"/>
+                            <field included="Y" fieldName="DSGTCBMD"/>
+                            <field included="Y" fieldName="FILL_10"/>
+                            <field included="Y" fieldName="DSGTCBMP"/>
+                            <field included="Y" fieldName="FILL_11"/>
+                            <field included="Y" fieldName="DSGNTCBA"/>
+                            <field included="Y" fieldName="DSGTCBAF"/>
+                            <field included="Y" fieldName="DSGTCBCA"/>
+                            <field included="Y" fieldName="DSGTCBPA"/>
+                            <field included="Y" fieldName="FILL_12"/>
+                            <field included="Y" fieldName="DSGTCBCU"/>
+                            <field included="Y" fieldName="DSGTCBPU"/>
+                            <field included="Y" fieldName="FILL_13"/>
+                            <field included="Y" fieldName="FILL_14"/>
+                            <field included="Y" fieldName="DSGTCBAL"/>
+                            <field included="Y" fieldName="FILL_15"/>
+                            <field included="Y" fieldName="DSGTCBDU"/>
+                            <field included="Y" fieldName="DSGTCBDS"/>
+                            <field included="Y" fieldName="DSGTCBDX"/>
+                            <field included="Y" fieldName="DSGTCBDO"/>
+                            <field included="Y" fieldName="FILL_16"/>
+                            <field included="Y" fieldName="DSGTCBST"/>
+                            <field included="Y" fieldName="DSGTCBMM"/>
+                            <field included="Y" fieldName="DSGSYSW"/>
+                            <field included="Y" fieldName="FILL_17"/>
+                            <field included="Y" fieldName="DSGTMCDQ"/>
+                            <field included="Y" fieldName="DSGTMPDQ"/>
+                            <field included="Y" fieldName="DSGTMADQ"/>
+                            <field included="Y" fieldName="FILL_18"/>
+                            <field included="Y" fieldName="DSGTWT"/>
+                            <field included="Y" fieldName="DSGTDT"/>
+                            <field included="Y" fieldName="DSGTCT"/>
+                            <field included="Y" fieldName="DSGACT"/>
+                            <field included="Y" fieldName="FILL_19"/>
+                            <field included="Y" fieldName="FILL_20"/>
+                        </field>
+                        <field included="Y" fieldName="DSG_TCB_POOL">
+                            <field included="Y" fieldName="DSGTCBPN"/>
+                            <field included="Y" fieldName="FILL_21"/>
+                            <field included="Y" fieldName="DSGMXTCB"/>
+                            <field included="Y" fieldName="DSGCNUAT"/>
+                            <field included="Y" fieldName="DSGPNUAT"/>
+                            <field included="Y" fieldName="DSGCNUUS"/>
+                            <field included="Y" fieldName="DSGPNUUS"/>
+                            <field included="Y" fieldName="FILL_22"/>
+                            <field included="Y" fieldName="DSGNTCBL"/>
+                            <field included="Y" fieldName="FILL_23"/>
+                            <field included="Y" fieldName="DSGTOTWL"/>
+                            <field included="Y" fieldName="DSGCURWT"/>
+                            <field included="Y" fieldName="DSGTOTMT"/>
+                            <field included="Y" fieldName="DSGTOTNW"/>
+                            <field included="Y" fieldName="DSGTOTMW"/>
+                            <field included="Y" fieldName="DSGCURNW"/>
+                            <field included="Y" fieldName="DSGPEANW"/>
+                            <field included="Y" fieldName="FILL_24"/>
+                            <field included="Y" fieldName="FILL_25"/>
+                            <field included="Y" fieldName="DSGMMWTS"/>
+                            <field included="Y" fieldName="DSGMMWTM"/>
+                            <field included="Y" fieldName="FILL_26"/>
+                            <field included="Y" fieldName="DSGCMMWS"/>
+                            <field included="Y" fieldName="DSGPMMWS"/>
+                            <field included="Y" fieldName="DSGCMMWT"/>
+                            <field included="Y" fieldName="DSGGTCBL"/>
+                            <field included="Y" fieldName="DSGLTCBL"/>
+                            <field included="Y" fieldName="FILL_27"/>
+                            <field included="Y" fieldName="FILL_28"/>
+                        </field>
+                    </interfaceField>
+                </segment>
+            </interface>
+        </serviceInterface>
+        <version>0</version>
+    </serviceOutputInterface>
+    <applicationDataStructureType>Block</applicationDataStructureType>
+    <messageVisitorRuntimeType>CICS_COMMAREA</messageVisitorRuntimeType>
+    <ccsid>IBM037</ccsid>
+    <totalExecCount>0</totalExecCount>
+    <failedCount>0</failedCount>
+    <trancodeOverride>CICEXTCB</trancodeOverride>
+    <trimOutputLeadingWhitespace>false</trimOutputLeadingWhitespace>
+    <trimOutputTrailingWhitespace>true</trimOutputTrailingWhitespace>
+    <escapeOutputControlCharacters>false</escapeOutputControlCharacters>
+    <initializeInputFields>false</initializeInputFields>
+    <omitOutputFieldsByValue>false</omitOutputFieldsByValue>
+    <omitOutputFieldsByValueByte>0x00</omitOutputFieldsByValueByte>
+    <omitOutputEmptyTags>false</omitOutputEmptyTags>
+    <enforceMinArrayOccurrence>false</enforceMinArrayOccurrence>
+    <enforceMinArrayOccurrenceResponse>false</enforceMinArrayOccurrenceResponse>
+    <ldsStartsWithLLZZTRANCODE>false</ldsStartsWithLLZZTRANCODE>
+    <ldsStartsWithLLZZ>false</ldsStartsWithLLZZ>
+    <truncateInputLastCharField>false</truncateInputLastCharField>
+</service>
