@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:message xmlns:ns2="http://www.ibm.com/ims/Transaction" transactionCode="" messageName="CEPCONP" direction="0" serviceType="CICS_COMM_AREA">
+    <message id="1" name="CEPCONP">
+        <segment id="1" name="COMMAREA" originalName="COMMAREA">
+            <field name="CEP_COMMAREA" originalName="CEP_COMMAREA" included="Y" path="CEP_COMMAREA">
+                <startPos>1</startPos>
+                <bytes>100</bytes>
+                <maxBytes>100</maxBytes>
+                <applicationDatatype datatype="STRUCT"/>
+                <field name="CODIGO" originalName="CODIGO" included="Y" path="CEP_COMMAREA.CODIGO">
+                    <startPos>1</startPos>
+                    <bytes>8</bytes>
+                    <maxBytes>8</maxBytes>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+                <field name="UF" originalName="UF" included="Y" path="CEP_COMMAREA.UF">
+                    <startPos>9</startPos>
+                    <bytes>2</bytes>
+                    <maxBytes>2</maxBytes>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+                <field name="CIDADE" originalName="CIDADE" included="Y" path="CEP_COMMAREA.CIDADE">
+                    <startPos>11</startPos>
+                    <bytes>30</bytes>
+                    <maxBytes>30</maxBytes>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+                <field name="BAIRRO" originalName="BAIRRO" included="Y" path="CEP_COMMAREA.BAIRRO">
+                    <startPos>41</startPos>
+                    <bytes>30</bytes>
+                    <maxBytes>30</maxBytes>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+                <field name="LOGRADOURO" originalName="LOGRADOURO" included="Y" path="CEP_COMMAREA.LOGRADOURO">
+                    <startPos>71</startPos>
+                    <bytes>30</bytes>
+                    <maxBytes>30</maxBytes>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+            </field>
+        </segment>
+    </message>
+</ns2:message>

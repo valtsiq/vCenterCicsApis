@@ -1,0 +1,14 @@
+{
+  "type" : "object",
+  "properties" : {
+    "CEP_COMMAREA" : {
+      "type" : "object",
+      "properties" : {
+        "CODIGO" : {
+          "maxLength" : 8,
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

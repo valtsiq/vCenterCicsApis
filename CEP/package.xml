@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<zosConnectApi xmlns="http://www.ibm.com/zosConnect/2.0/zosConnectApi" id="cep">
+    <apiSpec title="cep" basePath="/cep" description="BB demo" version="1.0.0">
+        <path relativePath="/get/{cepcodigo}">
+            <method type="GET" zosConnectServiceRef="CepCon" httpXformFile="api/get/{cepcodigo}/GET/mapping.xml" operationId="getCepCon"></method>
+        </path>
+        <apiDoc docType="SWAGGER">api-docs/swagger.json</apiDoc>
+    </apiSpec>
+</zosConnectApi>

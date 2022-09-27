@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<zosConnectApi xmlns="http://www.ibm.com/zosConnect/2.0/zosConnectApi" id="ncep">
+    <apiSpec title="ncep" basePath="/ncep" description="" version="1.0.0">
+        <path relativePath="/ncep/get{cepcod}">
+            <method type="GET" zosConnectServiceRef="CepCon" httpXformFile="api/ncep/get{cepcod}/GET/mapping.xml" operationId="getCepCon"></method>
+        </path>
+        <apiDoc docType="SWAGGER">api-docs/swagger.json</apiDoc>
+    </apiSpec>
+</zosConnectApi>
