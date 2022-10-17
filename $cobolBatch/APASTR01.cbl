@@ -10,6 +10,7 @@
       *----------------------------------------------------------------*
       *   GENERIC WORK VARIABLES                                       *
       *   GENERIC WORK VARIABLES                                       *
+      *   GENERIC WORK VARIABLES                                       *
       *----------------------------------------------------------------*
        01 work-storage.
           03 filler                   pic x(0010) value 'work-initi'.
