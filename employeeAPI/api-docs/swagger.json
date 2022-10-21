@@ -1,0 +1,163 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "Employee Services",
+    "version" : "1.0.0",
+    "title" : "employeeapi"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/employeeapi",
+  "schemes" : [ "https", "http" ],
+  "consumes" : [ "application/json" ],
+  "produces" : [ "application/json" ],
+  "paths" : {
+    "/Detail/{EmpNumb}" : {
+      "get" : {
+        "tags" : [ "employeeapi" ],
+        "operationId" : "getEmployeeDetail",
+        "parameters" : [ {
+          "name" : "Authorization",
+          "in" : "header",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "EmpNumb",
+          "in" : "path",
+          "required" : true,
+          "type" : "string",
+          "maxLength" : 6
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : "#/definitions/getEmployeeDetail_response_200"
+            }
+          }
+        }
+      }
+    },
+    "/List" : {
+      "get" : {
+        "tags" : [ "employeeapi" ],
+        "operationId" : "getEmployeeList",
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : "#/definitions/getEmployeeList_response_200"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "getEmployeeList_response_200" : {
+      "type" : "object",
+      "required" : [ "ResultSet Output", "StatusCode", "StatusDescription" ],
+      "properties" : {
+        "ResultSet Output" : {
+          "type" : "array",
+          "items" : {
+            "type" : "object",
+            "description" : "ResultSet Row",
+            "properties" : {
+              "employeeNumber" : {
+                "type" : "string",
+                "description" : "CHAR(6)",
+                "maxLength" : 6
+              },
+              "firstName" : {
+                "type" : "string",
+                "description" : "VARCHAR(12)",
+                "maxLength" : 12
+              },
+              "lastName" : {
+                "type" : "string",
+                "description" : "VARCHAR(15)",
+                "maxLength" : 15
+              },
+              "department" : {
+                "type" : "string",
+                "description" : "Nullable CHAR(3)",
+                "maxLength" : 3
+              }
+            },
+            "required" : [ "department", "employeeNumber", "firstName", "lastName" ]
+          }
+        },
+        "StatusDescription" : {
+          "type" : "string",
+          "description" : "Service invocation status description"
+        },
+        "StatusCode" : {
+          "type" : "integer",
+          "description" : "Service invocation HTTP status code",
+          "minimum" : 100,
+          "maximum" : 600
+        }
+      },
+      "description" : "Service employeeList invocation HTTP response body"
+    },
+    "getEmployeeDetail_response_200" : {
+      "type" : "object",
+      "required" : [ "ResultSet Output", "StatusCode", "StatusDescription" ],
+      "properties" : {
+        "ResultSet Output" : {
+          "type" : "array",
+          "items" : {
+            "type" : "object",
+            "description" : "ResultSet Row",
+            "properties" : {
+              "employeeNumber" : {
+                "type" : "string",
+                "description" : "CHAR(6)",
+                "maxLength" : 6
+              },
+              "firstName" : {
+                "type" : "string",
+                "description" : "VARCHAR(12)",
+                "maxLength" : 12
+              },
+              "lastName" : {
+                "type" : "string",
+                "description" : "VARCHAR(15)",
+                "maxLength" : 15
+              },
+              "department" : {
+                "type" : "string",
+                "description" : "Nullable CHAR(3)",
+                "maxLength" : 3
+              },
+              "phoneNumber" : {
+                "type" : "string",
+                "description" : "Nullable CHAR(4)",
+                "maxLength" : 4
+              },
+              "hireDate" : {
+                "type" : "string",
+                "description" : "Nullable DATE yyyy-[m]m-[d]d",
+                "minLength" : 8,
+                "maxLength" : 10,
+                "pattern" : "^(?![0]{4})([0-9]{4})-(0?[1-9]|1[0-2])-(0?[1-9]|[1-2][0-9]|3[0-1])$"
+              }
+            },
+            "required" : [ "department", "employeeNumber", "firstName", "hireDate", "lastName", "phoneNumber" ]
+          }
+        },
+        "StatusDescription" : {
+          "type" : "string",
+          "description" : "Service invocation status description"
+        },
+        "StatusCode" : {
+          "type" : "integer",
+          "description" : "Service invocation HTTP status code",
+          "minimum" : 100,
+          "maximum" : 600
+        }
+      },
+      "description" : "Service employeeDetails invocation HTTP response body"
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "ResultSet Output": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "employeeNumber": {
+            "type": "string",
+            "maxLength": 6,
+            "description": "CHAR(6)"
+          },
+          "firstName": {
+            "type": "string",
+            "maxLength": 12,
+            "description": "VARCHAR(12)"
+          },
+          "lastName": {
+            "type": "string",
+            "maxLength": 15,
+            "description": "VARCHAR(15)"
+          },
+          "department": {
+            "type": "string",
+            "maxLength": 3,
+            "description": "Nullable CHAR(3)"
+          },
+          "phoneNumber": {
+            "type": "string",
+            "maxLength": 4,
+            "description": "Nullable CHAR(4)"
+          },
+          "hireDate": {
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 10,
+            "pattern": "^(?![0]{4})([0-9]{4})-(0?[1-9]|1[0-2])-(0?[1-9]|[1-2][0-9]|3[0-1])$",
+            "description": "Nullable DATE yyyy-[m]m-[d]d"
+          }
+        },
+        "required": [
+          "employeeNumber",
+          "firstName",
+          "lastName",
+          "department",
+          "phoneNumber",
+          "hireDate"
+        ],
+        "description": "ResultSet Row"
+      }
+    },
+    "StatusDescription": {
+      "type": "string",
+      "description": "Service invocation status description"
+    },
+    "StatusCode": {
+      "type": "integer",
+      "multipleOf": 1,
+      "minimum": 100,
+      "maximum": 600,
+      "description": "Service invocation HTTP status code"
+    }
+  },
+  "required": [
+    "StatusDescription",
+    "StatusCode",
+    "ResultSet Output"
+  ],
+  "description": "Service employeeDetails invocation HTTP response body"
+}

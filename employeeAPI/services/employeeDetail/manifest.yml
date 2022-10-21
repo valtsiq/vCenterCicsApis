@@ -1,0 +1,33 @@
+---
+Manifest-Version: 1.0
+name: "employeeDetail"
+provider: "restclient-1.0"
+factoryPid: "rest"
+requestSchema:
+  value: "file:///schemas/employeeDetailRequest.json"
+  type: "JSONSchema"
+responseSchema:
+  value: "file:///schemas/employeeDetailResponse.json"
+  type: "JSONSchema"
+providerProperties:
+- propertyName: "db2ServiceName"
+  value: "employeeDetails"
+  type: "STRING"
+- propertyName: "db2ServiceVersion"
+  value: "V1"
+  type: "STRING"
+- propertyName: "collectionId"
+  value: "SYSIBMSERVICE"
+  type: "STRING"
+- propertyName: "verb"
+  value: "POST"
+  type: "STRING"
+- propertyName: "uri"
+  value: "/services/SYSIBMSERVICE/employeeDetails/V1"
+  type: "STRING"
+- propertyName: "connectionRef"
+  value: "db2Conn"
+  type: "STRING"
+providerObjects: []
+version: "1.0.0"
+description: "Employee Detail "
