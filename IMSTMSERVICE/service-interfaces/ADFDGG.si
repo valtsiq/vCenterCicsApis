@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ns2:message xmlns:ns2="http://www.ibm.com/ims/Transaction" transactionCode="" messageName="ADFDGG" direction="0" serviceType="IMS">
-    <message id="1" name="ADFDGG">
-        <segment id="1" name="Segment 1" originalName="Segment 1"/>
-    </message>
-</ns2:message>
