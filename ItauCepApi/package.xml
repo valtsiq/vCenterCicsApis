@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<zosConnectApi xmlns="http://www.ibm.com/zosConnect/2.0/zosConnectApi" id="itaucepapi">
-    <apiSpec title="itaucepapi" basePath="/itaucepapi" description="" version="1.0.0">
-        <path relativePath="/get/{wkcep}">
-            <method type="GET" zosConnectServiceRef="ItauCepSer" httpXformFile="api/get/{wkcep}/GET/mapping.xml" operationId="getItauCepSer"></method>
-        </path>
-        <apiDoc docType="SWAGGER">api-docs/swagger.json</apiDoc>
-    </apiSpec>
-</zosConnectApi>
