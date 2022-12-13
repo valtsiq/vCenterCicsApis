@@ -1,7 +1,7 @@
        IDENTIFICATION DIVISION.                                         00000100
        PROGRAM-ID. CEPCOBOL.                                            00000200
       ******************************************************************00000300
-      * Valter Siqueira - Systems                                       00000400
+      * Valter Siqueira - Systems      c                                00000400
       * Laboratoratório de uso particular ......                        00000500
       * ----------------------------------------------------------------00000600
       * Sistema .............. CEP                                      00000700
@@ -146,8 +146,8 @@
                    MOVE WK-CEP-FILL      TO CEPV0001-BAIRRO             00014800
                WHEN 5                                                   00014900
                    MOVE WK-CEP-FILL      TO CEPV0001-LOGRADOURO         00015000
-                   move 120              TO WK-CONT-BYTE-REC            00015100
-                   move 1                to WK-CONT-FILL                00015200
+                   MOVE 120              TO WK-CONT-BYTE-REC            00015100
+                   MOVE 1                TO WK-CONT-FILL                00015200
                END-EVALUATE                                             00015300
                MOVE SPACES               TO WK-CEP-FILL                 00015400
                MOVE 0                    TO WK-CONT-BYTE-FILL           00015500
@@ -158,7 +158,7 @@
            MOVE 0            TO WK-CONT-BYTE-FILL                       00016000
            MOVE SPACES       TO WK-CEP-FILL                             00016100
                                                                         00016200
-           write CEPV0001-REC                                           00016300
+           WRITE CEPV0001-REC                                           00016300
                                                                         00016400
            IF WK-VSAM-FILE-STATUS NOT = '00'                            00016500
               DISPLAY "-----ERRO VSAM -----"                            00016600
