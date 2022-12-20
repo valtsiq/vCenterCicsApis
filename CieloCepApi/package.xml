@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<zosConnectApi xmlns="http://www.ibm.com/zosConnect/2.0/zosConnectApi" id="cielocepapi">
-    <apiSpec title="cielocepapi" basePath="/cielocepapi" description="Cielo CEP" version="1.0.0">
-        <path relativePath="/consulta/{codigoCep}">
-            <method type="GET" zosConnectServiceRef="CieloCepConSer" httpXformFile="api/consulta/{codigoCep}/GET/mapping.xml" operationId="getCieloCepConSer"></method>
-        </path>
-        <apiDoc docType="SWAGGER">api-docs/swagger.json</apiDoc>
-    </apiSpec>
-</zosConnectApi>
