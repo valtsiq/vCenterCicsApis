@@ -1,0 +1,73 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "Banrisul CEP",
+    "version" : "1.0.0",
+    "title" : "bancepapi"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/bancepapi",
+  "schemes" : [ "https", "http" ],
+  "consumes" : [ "application/json" ],
+  "produces" : [ "application/json" ],
+  "paths" : {
+    "/Consulta/{codigo}" : {
+      "get" : {
+        "tags" : [ "bancepapi" ],
+        "operationId" : "getBanCepCon",
+        "parameters" : [ {
+          "name" : "Authorization",
+          "in" : "header",
+          "required" : false,
+          "type" : "string"
+        }, {
+          "name" : "codigo",
+          "in" : "path",
+          "required" : true,
+          "type" : "string",
+          "maxLength" : 8
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "OK",
+            "schema" : {
+              "$ref" : "#/definitions/getBanCepCon_response_200"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "getBanCepCon_response_200" : {
+      "type" : "object",
+      "properties" : {
+        "cep" : {
+          "type" : "object",
+          "properties" : {
+            "cepCode" : {
+              "type" : "string",
+              "maxLength" : 8
+            },
+            "uf" : {
+              "type" : "string",
+              "maxLength" : 2
+            },
+            "cidade" : {
+              "type" : "string",
+              "maxLength" : 30
+            },
+            "bairro" : {
+              "type" : "string",
+              "maxLength" : 30
+            },
+            "logradouro" : {
+              "type" : "string",
+              "maxLength" : 30
+            }
+          }
+        }
+      }
+    }
+  }
+}
